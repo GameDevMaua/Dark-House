@@ -12,7 +12,6 @@ namespace Player{
         private void OnCollisionEnter2D(Collision2D other) {
             if (other.gameObject.tag == "Wall" && !_audioSource.isPlaying) {
                 _audioSource.Play();
-                print("Funcionou?");
             }
                 
         }
