@@ -14,14 +14,14 @@ namespace Player.Player_Colisions{
             else print("Essa colisao nao esta no dicionario");
         }
 
-        public static void SubscribeColisionInDictionary(string key, Action<Collision2D> action) {
+        public static void SubscribeCollisionInDictionary(string key, Action<Collision2D> action) {
             if(!_collisionDictionary.ContainsKey(key)) 
                 _collisionDictionary.Add(key, action);
-            else {
+            else 
                 _collisionDictionary[key] += action;
-            }
+            
         }
-        public static void UnsubscribeColisionInDictionary(string key, Action<Collision2D> action) {
+        public static void UnsubscribeCollisionInDictionary(string key, Action<Collision2D> action) {
             if (_collisionDictionary.ContainsKey(key))
                 _collisionDictionary[key] -= action;
         }

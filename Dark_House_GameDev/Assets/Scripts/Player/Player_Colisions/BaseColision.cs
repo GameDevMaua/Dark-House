@@ -14,11 +14,11 @@ namespace Player.Player_Colisions{
         protected abstract void defaultMethod(Collision2D other);
 
         protected virtual void OnEnable() {
-            PlayerColisionManager.SubscribeColisionInDictionary(_gameTag, defaultMethod);
+            PlayerColisionManager.SubscribeCollisionInDictionary(_gameTag, defaultMethod);
         }
         
         protected virtual void OnDisable() {
-            PlayerColisionManager.UnsubscribeColisionInDictionary(_gameTag, defaultMethod);
+            PlayerColisionManager.UnsubscribeCollisionInDictionary(_gameTag, defaultMethod);
         }
     }
 }
