@@ -1,5 +1,4 @@
-﻿using System;
-using Core;
+﻿using Core;
 using UnityEngine;
 
 namespace Player{
@@ -9,8 +8,11 @@ namespace Player{
         private float _horizontalAxisInput;
         private float _verticalAxisInput;
 
-        [SerializeField] private float _movingVelocity;
+        [SerializeField] private float _movingVelocity = 4f;
 
+        public float MovingVelocity {
+            get => _movingVelocity;
+        }
 
         private void Start() {
             _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -20,7 +22,6 @@ namespace Player{
         private void Update() {
             _horizontalAxisInput = Input.GetAxisRaw("Horizontal");
             _verticalAxisInput   = Input.GetAxisRaw("Vertical");
-            
         }
 
         private void FixedUpdate() {
