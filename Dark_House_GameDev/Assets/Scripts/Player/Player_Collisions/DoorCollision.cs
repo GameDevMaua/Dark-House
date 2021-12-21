@@ -14,7 +14,6 @@ namespace Player.Player_Collisions{
 
         protected override void defaultMethod(Collision2D other) {
             if (PlayerKeyInventory.KeyCount >= _numberOfKeysNeeded) {
-                print(PlayerKeyInventory.KeyCount);
                 print("Abre-te sésamo");
             }
             
