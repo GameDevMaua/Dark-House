@@ -14,8 +14,12 @@ namespace Player.Player_Collisions{
         }
 
         protected override void defaultMethod(Collision2D other) {
-            _SetPositionInCollisionPoint(other);
-            _wallAudioSource.Play();
+            if(!_wallAudioSource.isPlaying) {
+                _SetPositionInCollisionPoint(other);
+                _wallAudioSource.Play();
+            }
+            
+            print("bateu na parede");
         }
 
         private void _SetPositionInCollisionPoint(Collision2D other) {
