@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace GameMenus.Buttons
 {
-    [TestAttribute(typeof(MainMenu))]
+    [ButtonOfMenu(typeof(MainMenu))]
     public class ButtonTest : BaseButton
     {
         

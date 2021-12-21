@@ -8,22 +8,31 @@ namespace GameMenus
 {
     public class MenuManager : MonoBehaviourSingletonPersistent<MenuManager>
     {
-        public event Action OnInputUp;
-        public event Action OnInputDown;
-
+        public GameObject buttonPrefab;
+        public Transform parent;
+        
+        public event Action OnInputUp = () => print("input up");
+        public event Action OnInputDown= () => print("input down");
+        public event Action OnInputConfirm = () => print("enter input");
         private void Update()
         {
-            
+           
             if (Input.GetKeyUp(KeyCode.UpArrow))
                 OnInputUp?.Invoke();
             if (Input.GetKeyUp(KeyCode.DownArrow))
                 OnInputDown?.Invoke();
+            if (Input.GetKeyDown(KeyCode.Space))
+                OnInputConfirm?.Invoke();
         }
 
-        private MenuTemplate _menuTemplateSelected;
-        public event Action<MenuTemplate> OnMenuSelectionChanged = menu => { };
+        [SerializeField]private IMenuTemplate _menuTemplateSelected;
+        public event Action<IMenuTemplate> OnMenuSelectionChanged = menu => { };
 
-        public void SelectMenu(MenuTemplate newMenuTemplateSelected)
+        public IMenuTemplate GetMenuSelected()
+        {
+            return _menuTemplateSelected;
+        }
+        public void SelectMenu(IMenuTemplate newMenuTemplateSelected)
         {
             if(_menuTemplateSelected == newMenuTemplateSelected)
                 return;
@@ -32,17 +41,13 @@ namespace GameMenus
             _menuTemplateSelected?.Select();
             OnMenuSelectionChanged.Invoke(_menuTemplateSelected);
         }
-        private void Start()
-        {
-        }
-
+       
         [ContextMenu("rebuild menu")]
         private void RebuildMenus()
         {
             gameObject.name = GetType().FullName!;
 
             
-            var a = Assembly.GetAssembly(typeof(MenuTemplate));
 
             Debug.LogWarning("on validating");
 
@@ -51,7 +56,7 @@ namespace GameMenus
             // {
             //    print(type.IsSubclassOf(typeof(MenuTemplate)));
             // }
-            foreach (var menuType in a.GetTypes().Where(type => type.IsSubclassOf(typeof(MenuTemplate)) && !type.IsAbstract))
+            foreach (var menuType in GetType().Assembly.GetTypes().Where(type => typeof(IMenuTemplate).IsAssignableFrom(type) && !type.IsAbstract) )
             {
                 print(menuType.FullName);
                 if (!GameObject.Find(menuType.FullName))
@@ -62,8 +67,11 @@ namespace GameMenus
         private void CreateNewMenu(Type menuType)
         {
             //print(menuType.FullName);
+            print(this);
             var newGameObject = new GameObject(menuType.FullName);
-            newGameObject.AddComponent(menuType);
+            var component = newGameObject.AddComponent(menuType) as IMenuTemplate;
+            print(this);
+            component.Inject(this);
         }
     }
 }

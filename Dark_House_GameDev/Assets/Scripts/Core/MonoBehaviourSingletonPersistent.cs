@@ -5,12 +5,29 @@ namespace Core
     public class MonoBehaviourSingletonPersistent<T> : MonoBehaviour
         where T : Component
     {
-        public static T Instance { get; private set; }
+        private static T _instance;
+        public static T Instance {
+            get
+            {
+                if (_instance == null)
+                {
+                    print("NewInstance");
+                    _instance = new GameObject("Test").AddComponent<T>();
+                    return _instance;
+                }
+                else
+                {
+                    return _instance;
+                }
+                
+            } 
+        }
 	
+        
         public virtual void Awake ()
         {
-            if (Instance == null) {
-                Instance = this as T;
+            if (_instance == null) {
+                _instance = this as T;
                 DontDestroyOnLoad (this);
             } else {
                 Destroy (gameObject);

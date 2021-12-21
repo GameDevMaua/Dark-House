@@ -1,15 +1,17 @@
 ﻿using System;
 using DefaultNamespace;
+using GameMenus.Implementations;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace GameMenus.Buttons
 {
+    
     public abstract class BaseButton : MonoBehaviour, ISelectableButton
     {
-        private MenuTemplate _currentMenu;
-        private ISelectableButton _downButton;
-        private ISelectableButton _upButton;
+        private IMenuTemplate _currentMenu;
+        public BaseButton _upButton;
+        public BaseButton _downButton;
 
         private void Start()
         {

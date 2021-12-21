@@ -3,22 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using GameMenus.Buttons;
 using UnityEngine;
 using UnityEngine.UI;
 using Object = UnityEngine.Object;
 
 namespace GameMenus
 {
-    
-    public abstract class MenuTemplate : MonoBehaviour
+    public abstract class MenuTemplate<T> : IMenuTemplate
     {
+        public List<BaseButton> _buttonsList = new List<BaseButton>(); 
         private ISelectableButton _selectedButton;
-        [SerializeField] private GameObject buttonPrefab;
-        [SerializeField] private Transform parent;
-
-
-        public event Action<ISelectableButton> OnSelectionChanged = button => {} ;
-        public void SelectButton(ISelectableButton newButtonSelected)
+        public MenuManager _menuManager;
+        public override event Action<ISelectableButton> OnSelectionChanged = button => {} ;
+        public override void SelectButton(ISelectableButton newButtonSelected)
         {
             print("newButton");
             if (_selectedButton == newButtonSelected)
@@ -29,51 +27,73 @@ namespace GameMenus
             OnSelectionChanged.Invoke(_selectedButton);
         
         }
-        // Start is called before the first frame update
-        void Start()
-        {
-            print("aaa");
-            var a = Assembly.GetAssembly(typeof(MenuTemplate));
         
-        
-            foreach (var type in a.GetTypes().Where(type => !(type.GetCustomAttribute<TestAttribute>() is null) )  )
-            {
-                print(type.Name);
-                var attribute = type.GetCustomAttribute<TestAttribute>();
-
-                if (attribute.menu == this.GetType())
-                {
-                    CreateButton(type);
-                }
-            }
-        }
-
         private void CreateButton(Type type)
         {
-            GameObject a =Instantiate(buttonPrefab, parent);
-            a.AddComponent(type);
+            print("creating button type: " + type.FullName);
+
+            GameObject o = Instantiate(_menuManager.buttonPrefab, _menuManager.parent);
+            Component component = o.AddComponent(type);
+            var baseButton = component as BaseButton;
+            print(baseButton);
+            _buttonsList.Add(baseButton); 
+            
         }
 
-        // Update is called once per frame
-        void Update()
+        private void OnEnable()
         {
-        
+            print("OnEnable: " + name);
+            print(_menuManager);
+            if (_menuManager.GetMenuSelected() != this as IMenuTemplate)
+            {
+                _menuManager.SelectMenu(this);
+                return;
+            }
+               
+            
+            
         }
 
-        public void DeSelect()
+        private void OnDisable()
         {
-            throw new NotImplementedException();
+            print("OnDisable: " + name);
+            if (_menuManager.GetMenuSelected() == this as IMenuTemplate)
+            {
+                _menuManager.SelectMenu(null);
+                return;
+            }
+
+            
+            
         }
 
-        public void Select()
+        public override void DeSelect()
         {
-            throw new NotImplementedException();
-        }
-    }
+            enabled = false;
 
-    public interface ISelectableButton
-    {
-        void OnLeavingClicking();
-        void OnClicking();
+            foreach (var button in _buttonsList)
+            {
+                Destroy(button.gameObject);
+            }
+            
+            _buttonsList.Clear();
+        }
+
+        public override void Select()
+        {
+            enabled = true;
+            var types = GetType()
+                .Assembly.GetTypes()
+                .Where(type =>
+                    type.GetCustomAttributes<ButtonOfMenuAttribute>()
+                        .Any(attribute => attribute.GetMenu() == typeof(T)));
+            foreach (var type in types) CreateButton(type);
+        }
+
+        public override void Inject(MenuManager menuManager)
+        {
+            _menuManager = menuManager;
+            print(_menuManager);
+        }
     }
 }
