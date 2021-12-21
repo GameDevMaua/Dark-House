@@ -2,8 +2,8 @@
 using UnityEngine;
 
 
-namespace Player.Player_Colisions{
-    public abstract class BaseColision : MonoBehaviour{
+namespace Player.Player_Collisions{
+    public abstract class BaseCollision : MonoBehaviour{
         protected string _gameTag;
         
         private void Awake() {
@@ -14,11 +14,11 @@ namespace Player.Player_Colisions{
         protected abstract void defaultMethod(Collision2D other);
 
         protected virtual void OnEnable() {
-            PlayerColisionManager.SubscribeCollisionInDictionary(_gameTag, defaultMethod);
+            PlayerCollisionManager.SubscribeCollisionInDictionary(_gameTag, defaultMethod);
         }
         
         protected virtual void OnDisable() {
-            PlayerColisionManager.UnsubscribeCollisionInDictionary(_gameTag, defaultMethod);
+            PlayerCollisionManager.UnsubscribeCollisionInDictionary(_gameTag);
         }
     }
 }

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Player.Player_Colisions{
-    public class PlayerColisionManager : MonoBehaviour{
+namespace Player.Player_Collisions{
+    public class PlayerCollisionManager : MonoBehaviour{
         private static Dictionary<string, Action<Collision2D>> _collisionDictionary = new Dictionary<string, Action<Collision2D>>();
         
         private void OnCollisionEnter2D(Collision2D other) {
@@ -17,13 +17,11 @@ namespace Player.Player_Colisions{
         public static void SubscribeCollisionInDictionary(string key, Action<Collision2D> action) {
             if(!_collisionDictionary.ContainsKey(key)) 
                 _collisionDictionary.Add(key, action);
-            else 
-                _collisionDictionary[key] += action;
-            
+
         }
-        public static void UnsubscribeCollisionInDictionary(string key, Action<Collision2D> action) {
+        public static void UnsubscribeCollisionInDictionary(string key) {
             if (_collisionDictionary.ContainsKey(key))
-                _collisionDictionary[key] -= action;
+                _collisionDictionary.Remove(key);
         }
     }
 }
