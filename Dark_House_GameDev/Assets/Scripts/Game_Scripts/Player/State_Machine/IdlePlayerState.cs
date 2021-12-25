@@ -1,17 +1,17 @@
 ﻿using UnityEngine;
 
 namespace Player.State_Machine{
-    public class IdleState : BaseState{
+    public class IdlePlayerState : BasePlayerState{
 
         public override void executeState() {
             if (_playerRigidbody.velocity.magnitude >= _playerSingleton.MovingVelocity) {
-                _stateMachine.ChangeState(_stateMachine.WalkingState);
+                _stateMachine.ChangeState(_stateMachine.WalkingPlayerState);
             }
             
             
         }
 
-        public IdleState(StateMachineManager stateMachineManager) : base(stateMachineManager) {
+        public IdlePlayerState(StateMachineManager stateMachineManager) : base(stateMachineManager) {
         }
     }
 }

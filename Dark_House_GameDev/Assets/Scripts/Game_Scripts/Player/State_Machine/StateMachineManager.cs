@@ -4,39 +4,39 @@ using UnityEngine;
 namespace Player.State_Machine{
     [Serializable]
     public class StateMachineManager : MonoBehaviour{
-        private BaseState _currentState;
+        private BasePlayerState _currentPlayerState;
       
-        private WalkingState _walkingState;
-        private IdleState _idleState;
+        private WalkingPlayerState _walkingPlayerState;
+        private IdlePlayerState _idlePlayerState;
 
         [SerializeField] private AudioSource _audioSource;
 
         
         private void Start() {
-            _walkingState = new WalkingState(this, _audioSource);
-            _idleState = new IdleState(this);
+            _walkingPlayerState = new WalkingPlayerState(this, _audioSource);
+            _idlePlayerState = new IdlePlayerState(this);
 
-            _currentState = _idleState;
+            _currentPlayerState = _idlePlayerState;
         }
 
         private void Update() {
-            _currentState.executeState();
+            _currentPlayerState.executeState();
         }
 
-        public void ChangeState(BaseState nextState) {
-            _currentState.OnStateExit();
-            _currentState = nextState;
-            _currentState.OnStateEnter();
+        public void ChangeState(BasePlayerState nextPlayerState) {
+            _currentPlayerState.OnStateExit();
+            _currentPlayerState = nextPlayerState;
+            _currentPlayerState.OnStateEnter();
         }
         
         
         
-        public WalkingState WalkingState {
-            get => _walkingState;
+        public WalkingPlayerState WalkingPlayerState {
+            get => _walkingPlayerState;
         }
 
-        public IdleState IdleState {
-            get => _idleState;
+        public IdlePlayerState IdlePlayerState {
+            get => _idlePlayerState;
         }
         
     }

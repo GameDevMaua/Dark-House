@@ -5,14 +5,14 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using NSubstitute;
 
-public class Testing
+public class Hello_World_Test
 {
     
     [Test]
-    public void Hello_World_Test() {
-        int kappa = 42;
+    public void hello_world_test() {
+        int theAnswer = 42;
 
-        Assert.AreEqual(42, kappa);
+        Assert.AreEqual(42, theAnswer);
 
     }
 

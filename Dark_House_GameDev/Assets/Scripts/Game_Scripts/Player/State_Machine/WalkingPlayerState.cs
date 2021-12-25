@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 namespace Player.State_Machine{
-    public class WalkingState : BaseState{
+    public class WalkingPlayerState : BasePlayerState{
         private AudioSource _audioSource;
 
 
@@ -15,11 +15,11 @@ namespace Player.State_Machine{
 
         public override void executeState() {
             if (_playerRigidbody.velocity.magnitude <= _playerSingleton.MovingVelocity * 0.20f) {
-                _stateMachine.ChangeState(_stateMachine.IdleState);
+                _stateMachine.ChangeState(_stateMachine.IdlePlayerState);
             }
         }
 
-        public WalkingState(StateMachineManager stateMachineManager, AudioSource audioSource) : base(stateMachineManager) {
+        public WalkingPlayerState(StateMachineManager stateMachineManager, AudioSource audioSource) : base(stateMachineManager) {
             _audioSource = audioSource;
         }
     }
