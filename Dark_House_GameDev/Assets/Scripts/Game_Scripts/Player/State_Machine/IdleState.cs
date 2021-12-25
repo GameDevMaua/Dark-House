@@ -8,7 +8,6 @@ namespace Player.State_Machine{
                 _stateMachine.ChangeState(_stateMachine.WalkingState);
             }
             
-            Debug.Log("Parado!");
             
         }
 
