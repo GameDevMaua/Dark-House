@@ -17,7 +17,6 @@ namespace Player.State_Machine{
             if (_playerRigidbody.velocity.magnitude <= _playerSingleton.MovingVelocity * 0.20f) {
                 _stateMachine.ChangeState(_stateMachine.IdleState);
             }
-            Debug.Log("Andando!");
         }
 
         public WalkingState(StateMachineManager stateMachineManager, AudioSource audioSource) : base(stateMachineManager) {
