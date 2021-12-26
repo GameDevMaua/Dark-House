@@ -2,21 +2,25 @@
 using UnityEngine;
 
 namespace Game_Scripts.Monster.State_Machine{
-    public class StateMachineManager : MonoBehaviour{
+    [Serializable]
+    public class StateMachineManager : MonoBehaviour, IStateMachineManager{
         private BaseMonsterState _currentState;
         private PreSpawnState _preSpawnState;
         private WalkingRandomlyState _walkingRandomlyState;
         private WalkingNearbyPlayerState _walkingNearbyPlayerState;
-        
 
+        [SerializeField] private float _initialCooldown;
+        [SerializeField] private float _initialProbability;
+        
+        
         private void Awake() {
-            _preSpawnState = new PreSpawnState(this);
+            _preSpawnState = new PreSpawnState(this, _initialCooldown, _initialProbability);
             _walkingRandomlyState = new WalkingRandomlyState(this);
             _walkingNearbyPlayerState = new WalkingNearbyPlayerState(this);
         }
 
         private void Start() {
-            _currentState = _preSpawnState;
+            _currentState = PreSpawnState;
         }
 
         private void Update() {

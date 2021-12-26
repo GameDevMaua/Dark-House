@@ -1,11 +1,17 @@
-﻿namespace Game_Scripts.Monster.State_Machine{
+﻿using Player;
+
+namespace Game_Scripts.Monster.State_Machine{
     public abstract class BaseMonsterState{
         
-        protected StateMachineManager _stateMachine;
+        protected IStateMachineManager _stateMachine;
+        protected MonsterSingleton _monsterSingleton;
+        protected PlayerSingleton _playerSingleton;
 
         
-        protected BaseMonsterState(StateMachineManager stateMachineManager) {
+        protected BaseMonsterState(IStateMachineManager stateMachineManager) {
             _stateMachine = stateMachineManager;
+            _monsterSingleton = MonsterSingleton.Instance;
+            _playerSingleton = PlayerSingleton.Instance;
         }
         
         

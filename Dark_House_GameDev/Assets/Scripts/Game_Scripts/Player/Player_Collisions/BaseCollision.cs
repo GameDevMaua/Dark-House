@@ -15,7 +15,6 @@ namespace Player.Player_Collisions{
 
         protected virtual void OnEnable() {
             PlayerCollisionManager.SubscribeCollisionInDictionary(_gameTag, defaultMethod);
-            print(_gameTag);
         }
         
         protected virtual void OnDisable() {
