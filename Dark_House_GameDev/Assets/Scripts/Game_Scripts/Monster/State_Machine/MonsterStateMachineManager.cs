@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game_Scripts.Monster.State_Machine{
     [Serializable]
-    public class StateMachineManager : MonoBehaviour, IStateMachineManager{
+    public class MonsterStateMachineManager : MonoBehaviour, IStateMachineManager{
         private BaseMonsterState _currentState;
         private PreSpawnState _preSpawnState;
         private WalkingRandomlyState _walkingRandomlyState;
@@ -11,16 +11,19 @@ namespace Game_Scripts.Monster.State_Machine{
 
         [SerializeField] private float _initialCooldown;
         [SerializeField] private float _initialProbability;
+        [SerializeField] private float _monsterMovementSpeed;
+        [SerializeField] private float _lastStateCooldown;
         
         
         private void Awake() {
             _preSpawnState = new PreSpawnState(this, _initialCooldown, _initialProbability);
-            _walkingRandomlyState = new WalkingRandomlyState(this);
-            _walkingNearbyPlayerState = new WalkingNearbyPlayerState(this);
+            _walkingRandomlyState = new WalkingRandomlyState(this, _monsterMovementSpeed);
+            _walkingNearbyPlayerState = new WalkingNearbyPlayerState(this, _monsterMovementSpeed*1.01f, _lastStateCooldown);
         }
 
         private void Start() {
             _currentState = PreSpawnState;
+            _currentState.OnStateEnter();
         }
 
         private void Update() {

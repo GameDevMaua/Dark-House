@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Player.State_Machine{
     [Serializable]
-    public class StateMachineManager : MonoBehaviour{
+    public class PlayerStateMachineManager : MonoBehaviour{
         private BasePlayerState _currentPlayerState;
       
         private WalkingPlayerState _walkingPlayerState;
@@ -12,11 +12,15 @@ namespace Player.State_Machine{
         [SerializeField] private AudioSource _audioSource;
 
         
-        private void Start() {
+        private void Awake() {
             _walkingPlayerState = new WalkingPlayerState(this, _audioSource);
             _idlePlayerState = new IdlePlayerState(this);
 
             _currentPlayerState = _idlePlayerState;
+        }
+
+        private void Start() {
+            _currentPlayerState.OnStateEnter();
         }
 
         private void Update() {

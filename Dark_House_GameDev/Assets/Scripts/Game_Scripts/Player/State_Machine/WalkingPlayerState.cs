@@ -1,12 +1,16 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Player.State_Machine{
     public class WalkingPlayerState : BasePlayerState{
         private AudioSource _audioSource;
 
+        public event Action OnWalking;
+
 
         public override void OnStateEnter() {
             _audioSource.Play();
+            
         }
 
         public override void OnStateExit() {
@@ -14,12 +18,13 @@ namespace Player.State_Machine{
         }
 
         public override void executeState() {
+            OnWalking?.Invoke();
             if (_playerRigidbody.velocity.magnitude <= _playerSingleton.MovingVelocity * 0.20f) {
-                _stateMachine.ChangeState(_stateMachine.IdlePlayerState);
+                PlayerStateMachine.ChangeState(PlayerStateMachine.IdlePlayerState);
             }
         }
 
-        public WalkingPlayerState(StateMachineManager stateMachineManager, AudioSource audioSource) : base(stateMachineManager) {
+        public WalkingPlayerState(PlayerStateMachineManager playerStateMachineManager, AudioSource audioSource) : base(playerStateMachineManager) {
             _audioSource = audioSource;
         }
     }

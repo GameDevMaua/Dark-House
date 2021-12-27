@@ -13,10 +13,10 @@ public class State_Machine_Tests
     [UnityTest]
     public IEnumerator it_should_be_3_units_away_from_player_when_in_WalkingRandomlyState_enter()
     {
-        var stateMachine = Substitute.For<StateMachineManager>();
-        var walkingState = new WalkingRandomlyState(stateMachine);
+        var stateMachine = Substitute.For<MonsterStateMachineManager>();
+        var walkingState = new WalkingRandomlyState(stateMachine,6f);
 
-        var resultVector = walkingState.TeleportToNextPlayerRandomly(3);
+        var resultVector = walkingState.RandomVectorAroundPlayer(3);
         var distance = (PlayerSingleton.Instance.transform.position - resultVector).magnitude;
 
         yield return null;

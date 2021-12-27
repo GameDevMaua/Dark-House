@@ -5,13 +5,13 @@ namespace Player.State_Machine{
 
         public override void executeState() {
             if (_playerRigidbody.velocity.magnitude >= _playerSingleton.MovingVelocity) {
-                _stateMachine.ChangeState(_stateMachine.WalkingPlayerState);
+                PlayerStateMachine.ChangeState(PlayerStateMachine.WalkingPlayerState);
             }
             
             
         }
 
-        public IdlePlayerState(StateMachineManager stateMachineManager) : base(stateMachineManager) {
+        public IdlePlayerState(PlayerStateMachineManager playerStateMachineManager) : base(playerStateMachineManager) {
         }
     }
 }
