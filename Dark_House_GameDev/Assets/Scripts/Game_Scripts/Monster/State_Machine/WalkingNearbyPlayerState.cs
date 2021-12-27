@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using Player.State_Machine;
+﻿using Player.State_Machine;
 using UnityEngine;
 
 namespace Game_Scripts.Monster.State_Machine{
@@ -25,14 +24,25 @@ namespace Game_Scripts.Monster.State_Machine{
         public override void executeState() { //todo:Esse jeito de ver se o evento já foi inscrito me parece horrível
             _cooldown -= Time.deltaTime;
             if (_cooldown <= 0 && !_jafoi) {
-                Debug.Log(_cooldown);
                 _jafoi = true;
                 SubscribeAtOnWalkingEvent();
             }
+            
+            var distanceFromPlayer =
+                (_monsterSingleton.transform.position - _playerSingleton.transform.position).magnitude;
+
+            if (distanceFromPlayer >= 16) { // esse 16 é meramente ilustrativo
+                _stateMachine.ChangeCurrentState(_stateMachine.PreSpawnState);
+            }
+            
+            if(!_monsterSingleton.AudioSource.isPlaying)
+                _monsterSingleton.PlayAnAudioFromAudioArray(1);
+            
         }
 
         public override void OnStateExit() {
             _playerStateMachinePlayer.WalkingPlayerState.OnWalking -= VerifyIfTheGameIsOver;
+            _monsterRigidbody.velocity = Vector2.zero;
         }
 
 
@@ -49,7 +59,6 @@ namespace Game_Scripts.Monster.State_Machine{
 
         }
          private void SubscribeAtOnWalkingEvent() {
-             Debug.Log("Se inscreveu!");
              _playerStateMachinePlayer.WalkingPlayerState.OnWalking += VerifyIfTheGameIsOver;
              
         }

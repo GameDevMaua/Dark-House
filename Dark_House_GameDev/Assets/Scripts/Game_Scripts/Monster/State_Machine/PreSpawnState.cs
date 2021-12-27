@@ -28,10 +28,11 @@ namespace Game_Scripts.Monster.State_Machine{
 
             var randomObject = new Random(); //Definir se vai ou não spawnar
             var diceNumber = randomObject.NextDouble();
-            
-            if(diceNumber < _probabilityToSpawnInDecimals)
+            if (diceNumber < _probabilityToSpawnInDecimals)
                 _stateMachine.ChangeCurrentState(_stateMachine.WalkingRandomlyState); //spawnar
-            
+            else
+                Timer = _cooldownToCheckSpawn;
+
         }
         
         public PreSpawnState(IStateMachineManager stateMachineManager, float cooldown, float probability) : base(stateMachineManager) {

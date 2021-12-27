@@ -80,6 +80,16 @@ namespace Game_Scripts.Monster.State_Machine{
             //Verifica se o player faz barulho
             //Caso positivo, verifica a distância
             //Se o player estiver no raio pré-determinado por mim, muda para o estado Walking Nearby Player
+
+            var distanceFromPlayer =
+                (_monsterSingleton.transform.position - _playerSingleton.transform.position).magnitude;
+
+            if (distanceFromPlayer >= 16) { // esse 16 é meramente ilustrativo
+                _stateMachine.ChangeCurrentState(_stateMachine.PreSpawnState);
+            }
+
+            if(!_monsterSingleton.AudioSource.isPlaying)
+                _monsterSingleton.PlayAnAudioFromAudioArray(0);
             
         }
 
@@ -92,6 +102,7 @@ namespace Game_Scripts.Monster.State_Machine{
 
         public override void OnStateExit() {
             _playerStateMachinePlayer.WalkingPlayerState.OnWalking -= changeState;
+            _monsterRigidbody.velocity = Vector2.zero;
         }
 
 
