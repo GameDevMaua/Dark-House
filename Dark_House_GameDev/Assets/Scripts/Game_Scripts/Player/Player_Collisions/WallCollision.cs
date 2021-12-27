@@ -9,10 +9,13 @@ namespace Player.Player_Collisions{
         private AudioSource _wallAudioSource;
 
         private void Start() {
-            
+
+
             _wallAudioSource = _wallAudioSourceGameObject.GetComponent<AudioSource>();
         }
 
+        
+        
         protected override void defaultMethod(Collision2D other) {
             if(!_wallAudioSource.isPlaying) {
                 _SetPositionInCollisionPoint(other);

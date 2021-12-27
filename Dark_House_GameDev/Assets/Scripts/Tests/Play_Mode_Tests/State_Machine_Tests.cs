@@ -14,7 +14,7 @@ public class State_Machine_Tests
     public IEnumerator it_should_be_3_units_away_from_player_when_in_WalkingRandomlyState_enter()
     {
         var stateMachine = Substitute.For<MonsterStateMachineManager>();
-        var walkingState = new WalkingRandomlyState(stateMachine,6f);
+        var walkingState = new WalkingRandomlyState(stateMachine,6f, 10f,10f,2f);
 
         var resultVector = walkingState.RandomVectorAroundPlayer(3);
         var distance = (PlayerSingleton.Instance.transform.position - resultVector).magnitude;

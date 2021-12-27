@@ -10,6 +10,7 @@ namespace Game_Scripts.Monster.State_Machine{
         private float _cooldownToCheckSpawn;
         private float _probabilityToSpawnInDecimals;
         private float _timer;
+        
 
 
         public override void OnStateEnter() {
@@ -35,7 +36,7 @@ namespace Game_Scripts.Monster.State_Machine{
 
         }
         
-        public PreSpawnState(IStateMachineManager stateMachineManager, float cooldown, float probability) : base(stateMachineManager) {
+        public PreSpawnState(IStateMachineManager stateMachineManager, float cooldown, float probability, float radiousPreSpawn) : base(stateMachineManager, radiousPreSpawn) {
             CooldownToCheckSpawn = cooldown;
             ProbabilityToSpawnInDecimals = probability;
         }

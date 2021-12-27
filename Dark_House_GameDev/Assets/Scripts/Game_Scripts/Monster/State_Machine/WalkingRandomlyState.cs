@@ -8,6 +8,8 @@ namespace Game_Scripts.Monster.State_Machine{
 
         private float _monsterSpeedMagnitude;
         private Vector3 _monsterSpeedVector;
+        private float _radiousWalkingNearbyState;
+        private float _spawnAroundPlayerRadious;
 
         private Player.State_Machine.PlayerStateMachineManager _playerStateMachinePlayer;
         
@@ -20,7 +22,7 @@ namespace Game_Scripts.Monster.State_Machine{
             
 
             //posionar o monstro
-           TeleportMonster(RandomVectorAroundPlayer(3)); //esse raio de tamanho 3 é meramente arbitrário
+           TeleportMonster(RandomVectorAroundPlayer(_spawnAroundPlayerRadious));
            
            //Verificar se velocidade é válida
            var isItGoingToCollideWithPlayer = true;
@@ -77,14 +79,11 @@ namespace Game_Scripts.Monster.State_Machine{
 
 
         public override void executeState() {
-            //Verifica se o player faz barulho
-            //Caso positivo, verifica a distância
-            //Se o player estiver no raio pré-determinado por mim, muda para o estado Walking Nearby Player
 
             var distanceFromPlayer =
                 (_monsterSingleton.transform.position - _playerSingleton.transform.position).magnitude;
 
-            if (distanceFromPlayer >= 16) { // esse 16 é meramente ilustrativo
+            if (distanceFromPlayer >= GOBackToPreSpawnStateRadiousPreSpawn) { 
                 _stateMachine.ChangeCurrentState(_stateMachine.PreSpawnState);
             }
 
@@ -96,7 +95,7 @@ namespace Game_Scripts.Monster.State_Machine{
         public void changeState() {
             var distance = (_monsterSingleton.transform.position - _playerSingleton.transform.position).magnitude;
             
-            if(distance <= 10) //esse três é o raio em que o monstro irá ouvir o player. Esse número é meramente arbitrário
+            if(distance <= _radiousWalkingNearbyState) 
                 _stateMachine.ChangeCurrentState(_stateMachine.WalkingNearbyPlayerState);
         }
 
@@ -106,8 +105,10 @@ namespace Game_Scripts.Monster.State_Machine{
         }
 
 
-        public WalkingRandomlyState(IStateMachineManager stateMachineManager, float monsterSpeedMagnitude) : base(stateMachineManager) {
+        public WalkingRandomlyState(IStateMachineManager stateMachineManager, float monsterSpeedMagnitude,float spawnAroundPlayerRadious,float radiousWalkingNearbyState, float radiousPreSpawn) : base(stateMachineManager, radiousPreSpawn) {
             _monsterSpeedMagnitude = monsterSpeedMagnitude;
+            _radiousWalkingNearbyState = radiousWalkingNearbyState;
+            _spawnAroundPlayerRadious = spawnAroundPlayerRadious;
         }
     }
 }
