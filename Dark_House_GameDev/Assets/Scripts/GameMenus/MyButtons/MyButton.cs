@@ -12,13 +12,14 @@ namespace GameMenus.MyButtons
     {
         #region Depencies
         
-        private Button _button;
-        private MenuTemplateBase _menuTemplateBase;
+        protected Button _button;
+        private MenuTemplateAbstractClass _menuTemplateAbstractClass;
         private MenuManager _menuManager;
         private EventSystem _eventSystem;
         private Button _upButton;
         private Button _downButton;
 
+        [SerializeField] private GameObject prefab;
         #endregion
 
         #region public Events
@@ -29,29 +30,41 @@ namespace GameMenus.MyButtons
         
         #region Initialization
 
-        private void Start()
+        public void Build()
         {
-            _button = GetComponent<Button>();
-
             if (_button is null)
                 return;
             
             _button.onClick.AddListener(OnInputConfirm);
             var navigation = _button.navigation;
-            print(navigation);
+            //print(navigation);
             navigation.mode = Navigation.Mode.Explicit;
-            navigation.selectOnUp = _upButton ? _upButton : (gameObject.NextChild() != null ? gameObject.NextChild().GetComponent<Button>(): MyNullButton.Instance._button);
-            navigation.selectOnDown = _upButton ? _upButton : (gameObject.PreviewsChild() != null ?gameObject.PreviewsChild().GetComponent<Button>():MyNullButton.Instance._button);
+            navigation.selectOnUp = _upButton!= null ? _upButton : (gameObject.PreviewsChild() != null ? gameObject.PreviewsChild().GetComponent<Button>(): MyNullButton.Instance._button);
+            navigation.selectOnDown = _downButton != null ? _downButton : (gameObject.NextChild() != null ? gameObject.NextChild().GetComponent<Button>():MyNullButton.Instance._button);
             _button.navigation = navigation;
+
+            //print(GetType().Name);
+            var gameObj = Resources.Load<GameObject>(GetType().Name);
+            //print(gameObj);
+            if (gameObj != null)
+            {
+                Instantiate(gameObj, transform);
+            }
+        }
+        private void Start()
+        {
+            Build();
         }
 
-        public void Inject(MenuTemplateBase menuTemplateBase,MenuManager menuManager,Button upButton,Button downButton, EventSystem eventSystem)
+        public void Inject(MenuTemplateAbstractClass menuTemplateAbstractClass,MenuManager menuManager,Button upButton,Button downButton, EventSystem eventSystem)
         {
-            _menuTemplateBase = menuTemplateBase;
+            _menuTemplateAbstractClass = menuTemplateAbstractClass;
             _menuManager = menuManager;
             _upButton = upButton;
             _downButton = downButton;
             _eventSystem = eventSystem;
+
+            _button = GetComponent<Button>();
         }
 
         #endregion
@@ -60,18 +73,26 @@ namespace GameMenus.MyButtons
         
         protected virtual void OnInputConfirm()
         {
-            print("confirm");
         }
 
         public void OnSelect(BaseEventData eventData)
         {
-            print("selected");
+            GetComponentInChildren<AudioSource>()?.Play();
+
+            //_menuTemplateBase.SelectedButton = this;
         }
 
         public void OnDeselect(BaseEventData eventData)
         {
-         
-            print("deselected");
+            // print("--------");
+            // print(gameObject.name);
+            // print(eventData.selectedObject.name);
+            // print("deselected");
+            // if (_menuTemplateBase.SelectedButton!=MyNullButton.Instance)
+            // {
+            //     _menuTemplateBase.SelectedButton = MyNullButton.Instance;
+            //     _eventSystem.SetSelectedGameObject(MyNullButton.Instance.gameObject);
+            // }
         }
 
         #endregion

@@ -12,9 +12,9 @@ namespace GameMenus
         public Transform parent;
         
         
-        [SerializeField]private MenuTemplateBase menuTemplateBaseSelected;
-        public MenuTemplateBase _firstMenuSelected;
-        public event Action<MenuTemplateBase> OnMenuSelectionChanged = menu => { };
+        [SerializeField]private MenuTemplateAbstractClass menuTemplateAbstractClassSelected;
+        public MenuTemplateAbstractClass _firstMenuSelected;
+        public event Action<MenuTemplateAbstractClass> OnMenuSelectionChanged = menu => { };
 
         public event Action OnInputUp;// = () => print("input up");
         public event Action OnInputDown;//= () => print("input down");
@@ -35,18 +35,20 @@ namespace GameMenus
             SelectMenu(_firstMenuSelected);
         }
 
-        public MenuTemplateBase GetMenuSelected()
+        public MenuTemplateAbstractClass GetMenuSelected()
         {
-            return menuTemplateBaseSelected;
+            return menuTemplateAbstractClassSelected;
         }
-        public void SelectMenu(MenuTemplateBase newMenuTemplateBaseSelected)
+        public void SelectMenu(MenuTemplateAbstractClass newMenuTemplateAbstractClassSelected)
         {
-            if(menuTemplateBaseSelected == newMenuTemplateBaseSelected)
+            if(menuTemplateAbstractClassSelected == newMenuTemplateAbstractClassSelected)
                 return;
-            menuTemplateBaseSelected?.DeSelect();
-            menuTemplateBaseSelected = newMenuTemplateBaseSelected;
-            menuTemplateBaseSelected?.Select();
-            OnMenuSelectionChanged.Invoke(menuTemplateBaseSelected);
+            menuTemplateAbstractClassSelected?.DeSelect();
+            menuTemplateAbstractClassSelected?.gameObject.SetActive(false);
+            menuTemplateAbstractClassSelected = newMenuTemplateAbstractClassSelected;
+            menuTemplateAbstractClassSelected?.Select();
+            menuTemplateAbstractClassSelected?.gameObject.SetActive(true);
+            OnMenuSelectionChanged.Invoke(menuTemplateAbstractClassSelected);
         }
        
         [ContextMenu("rebuild menu")]
@@ -63,7 +65,7 @@ namespace GameMenus
             // {
             //    print(type.IsSubclassOf(typeof(MenuTemplate)));
             // }
-            foreach (var menuType in GetType().Assembly.GetTypes().Where(type => typeof(MenuTemplateBase).IsAssignableFrom(type) && !type.IsAbstract) )
+            foreach (var menuType in GetType().Assembly.GetTypes().Where(type => typeof(MenuTemplateAbstractClass).IsAssignableFrom(type) && !type.IsAbstract) )
             {
                 print(menuType.FullName);
                 if (!GameObject.Find(menuType.FullName))
@@ -76,7 +78,7 @@ namespace GameMenus
             //print(menuType.FullName);
             //print(this);
             var newGameObject = new GameObject(menuType.FullName);
-            var component = newGameObject.AddComponent(menuType) as MenuTemplateBase;
+            var component = newGameObject.AddComponent(menuType) as MenuTemplateAbstractClass;
             //print(this);
             component.Inject(this);
         }

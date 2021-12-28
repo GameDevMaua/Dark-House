@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &334640861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,9 +153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonsList: []
-  _selectedButton: {fileID: 0}
   _menuManager: {fileID: 1095891225}
-  _eventSystem: {fileID: 0}
+  _eventSystem: {fileID: 1752109724}
 --- !u!4 &334640862
 Transform:
   m_ObjectHideFlags: 0
@@ -199,9 +198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca91d367e64e49bfb699c802b2011fe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonPrefab: {fileID: 7815981023815266419, guid: 3c2dbcbdaa51c2f4592553aea3e3fb78, type: 3}
+  buttonPrefab: {fileID: 7815981023815266419, guid: 32f685e941ae03c4ebfd72265d7fc199, type: 3}
   parent: {fileID: 1946910402}
-  menuTemplateBaseSelected: {fileID: 0}
+  menuTemplateAbstractClassSelected: {fileID: 0}
   _firstMenuSelected: {fileID: 1180423520}
 --- !u!4 &1095891226
 Transform:
@@ -247,7 +246,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonsList: []
-  _selectedButton: {fileID: 0}
   _menuManager: {fileID: 1095891225}
   _eventSystem: {fileID: 1752109724}
 --- !u!4 &1180423521

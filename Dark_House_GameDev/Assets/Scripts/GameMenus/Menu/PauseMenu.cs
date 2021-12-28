@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace GameMenus.Implementations
 {
-    public class PauseMenu : MenuTemplateBase<PauseMenu>
+    public class PauseMenu : MenuTemplateAbstractClass<PauseMenu>
     {
         [ContextMenu("Select This menu")]
         public void test()

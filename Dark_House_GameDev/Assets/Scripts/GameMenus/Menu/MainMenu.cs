@@ -4,7 +4,7 @@ using UnityEngine;
 namespace GameMenus.Implementations
 {
     
-    public class MainMenu : MenuTemplateBase<MainMenu>
+    public class MainMenu : MenuTemplateAbstractClass<MainMenu>
     {
         [ContextMenu("Select This menu")]
         public void test()

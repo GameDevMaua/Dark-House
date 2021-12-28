@@ -8,18 +8,24 @@ using GameMenus.MyButtons;
 namespace GameMenus
 {
     
-    public abstract class MenuTemplateBase<T> : MenuTemplateBase
+    public abstract class MenuTemplateAbstractClass<T> : MenuTemplateAbstractClass
     {
         public List<MyButton> _buttonsList = new List<MyButton>(); 
-        public MyButton _selectedButton;
         public MenuManager _menuManager;
         [SerializeField]private EventSystem _eventSystem;
-        //public override event Action<BaseButton> OnSelectionChanged = button => {} ;
         
+        private MyButton selectedButton;
+
+        public override MyButton SelectedButton
+        {
+            get => selectedButton;
+            set => selectedButton = value;
+        }
         
         private void CreateButton(Type type)
         {
             GameObject o = Instantiate(_menuManager.buttonPrefab, _menuManager.parent);
+            o.name = type.Name;
             Component component = o.AddComponent(type);
             var baseButton = component as MyButton;
             baseButton.Inject(this,_menuManager,null,null,_eventSystem);
@@ -49,14 +55,32 @@ namespace GameMenus
             
             foreach (var type in types)
                 CreateButton(type);
-            MyNullButton.Instance.Inject(this,_menuManager,_buttonsList.First().GetButton(),_buttonsList.Last().GetButton(),_eventSystem);
-            
+            // print(_buttonsList.First().GetButton());
+            // print(_buttonsList.Last().GetButton());
+
+
+            var myNullButton = MyNullButton.Instance;
+            myNullButton.Inject(this,_menuManager,_buttonsList.Last().GetButton(),_buttonsList.First().GetButton(),_eventSystem);
+            myNullButton.Build();
         }
 
         public override void Inject(MenuManager menuManager)
         {
             _menuManager = menuManager;
-            print(_menuManager);
+        }
+
+        private void Update()
+        {
+            //print("----");
+            //print(_eventSystem.currentSelectedGameObject);
+            //print(_eventSystem.currentSelectedGameObject==null);
+            if(_eventSystem.currentSelectedGameObject == null)
+            {
+                //print("huasdhuashd");
+                //print(MyNullButton.Instance);
+                _eventSystem.SetSelectedGameObject(MyNullButton.Instance.gameObject);
+            }
+            //print(_eventSystem.currentSelectedGameObject);
         }
     }
 }
