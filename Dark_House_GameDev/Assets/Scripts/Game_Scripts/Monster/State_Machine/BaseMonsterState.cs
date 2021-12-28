@@ -8,15 +8,13 @@ namespace Game_Scripts.Monster.State_Machine{
         protected MonsterSingleton _monsterSingleton;
         protected PlayerSingleton _playerSingleton;
         protected Rigidbody2D _monsterRigidbody;
-        protected float GOBackToPreSpawnStateRadiousPreSpawn;
-
         
-        protected BaseMonsterState(IStateMachineManager stateMachineManager, float radiousPreSpawn) {
+        
+        protected BaseMonsterState(IStateMachineManager stateMachineManager) {
             _stateMachine = stateMachineManager;
             _monsterSingleton = MonsterSingleton.Instance;
             _playerSingleton = PlayerSingleton.Instance;
             _monsterRigidbody = _monsterSingleton.GetComponent<Rigidbody2D>();
-            GOBackToPreSpawnStateRadiousPreSpawn = radiousPreSpawn;
         }
         
         

@@ -9,7 +9,7 @@ namespace Game_Scripts.Monster{
         private void Awake() {
             _audioSource = GetComponent<AudioSource>();
         }
-
+        
         public void PlayAnAudioFromAudioArray(int index) {
             _audioSource.clip = _audioClipsArray[index];
             _audioSource.Play();

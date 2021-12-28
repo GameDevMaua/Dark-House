@@ -10,6 +10,7 @@ namespace Game_Scripts.Monster.State_Machine{
         private float _timer;
         private bool _jafoi = false;
         private float _gameOverRadious;
+        private float _distanceToGoBackToRoutineState;
 
         public override void OnStateEnter() {
             _velocityVector = (_playerSingleton.transform.position - _monsterSingleton.transform.position).normalized *
@@ -34,16 +35,17 @@ namespace Game_Scripts.Monster.State_Machine{
                 SubscribeAtOnWalkingEvent();
             }
             
-            var distanceFromPlayer =
-                (_monsterSingleton.transform.position - _playerSingleton.transform.position).magnitude;
-
-            if (distanceFromPlayer >= GOBackToPreSpawnStateRadiousPreSpawn) { // esse 16 é meramente ilustrativo
-                _stateMachine.ChangeCurrentState(_stateMachine.PreSpawnState);
-            }
             
             if(!_monsterSingleton.AudioSource.isPlaying)
                 _monsterSingleton.PlayAnAudioFromAudioArray(1);
-            
+
+            var distanceToPlayer =
+                (_playerSingleton.transform.position - _monsterSingleton.transform.position).magnitude;
+
+            if (distanceToPlayer >= _distanceToGoBackToRoutineState) {
+                _stateMachine.ChangeCurrentState(_stateMachine.WalkingRoutineState);
+            }
+
         }
 
         public override void OnStateExit() {
@@ -57,9 +59,8 @@ namespace Game_Scripts.Monster.State_Machine{
 
                 var distance = (_playerSingleton.transform.position - _monsterSingleton.transform.position).magnitude;
 
-                if (distance <= _gameOverRadious) { //esse 10 é meramente arbitrário
+                if (distance <= _gameOverRadious) {
                     Debug.Log("Fim de jogo!");
-                    _stateMachine.ChangeCurrentState(_stateMachine.PreSpawnState);
                 } 
                     
 
@@ -82,10 +83,11 @@ namespace Game_Scripts.Monster.State_Machine{
              }
          }
 
-         public WalkingNearbyPlayerState(IStateMachineManager stateMachineManager, float movementSpeed, float cooldown, float gameOverRadious, float radiousPreSpawn) : base(stateMachineManager, radiousPreSpawn) {
+         public WalkingNearbyPlayerState(IStateMachineManager stateMachineManager, float movementSpeed, float cooldown, float gameOverRadious, float distanceToGoBackToRoutineState) : base(stateMachineManager) {
             _movementSpeed = movementSpeed;
             _cooldown = cooldown;
             _gameOverRadious = gameOverRadious;
+            _distanceToGoBackToRoutineState = distanceToGoBackToRoutineState;
          }
     }
 }

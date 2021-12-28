@@ -8,6 +8,11 @@ namespace Player.Player_Collisions{
 
         private void Start() {
             _audioSource = GetComponent<AudioSource>();
+            
+            var position = transform.position;
+            position = new Vector3(position.x, position.y, 0f);
+            
+            transform.position = position;
         }
 
         protected override void defaultMethod(Collision2D other) {
