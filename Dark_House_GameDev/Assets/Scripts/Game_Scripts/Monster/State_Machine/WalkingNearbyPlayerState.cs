@@ -1,4 +1,5 @@
-﻿using Player.State_Machine;
+﻿using System;
+using Player.State_Machine;
 using UnityEngine;
 
 namespace Game_Scripts.Monster.State_Machine{
@@ -11,6 +12,8 @@ namespace Game_Scripts.Monster.State_Machine{
         private bool _jafoi = false;
         private float _gameOverRadious;
         private float _distanceToGoBackToRoutineState;
+
+        public event Action OnGameOver;
 
         public override void OnStateEnter() {
             _velocityVector = (_playerSingleton.transform.position - _monsterSingleton.transform.position).normalized *
@@ -60,7 +63,7 @@ namespace Game_Scripts.Monster.State_Machine{
                 var distance = (_playerSingleton.transform.position - _monsterSingleton.transform.position).magnitude;
 
                 if (distance <= _gameOverRadious) {
-                    Debug.Log("Fim de jogo!");
+                    OnGameOver?.Invoke();
                 } 
                     
 

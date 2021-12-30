@@ -26,7 +26,7 @@ namespace Player.Player_Collisions{
             _collider2D.enabled = false;
             _spriteRenderer.enabled = false;
             
-            print("Nós temos " +PlayerKeyInventory.KeyCount);
+            print($"Nós temos {PlayerKeyInventory.KeyCount} chaves");
 
         }
 

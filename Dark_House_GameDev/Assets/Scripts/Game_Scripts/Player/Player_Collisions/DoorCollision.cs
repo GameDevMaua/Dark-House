@@ -1,13 +1,14 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Player.Player_Collisions{
     public class DoorCollision : BaseCollision{
 
         private int _numberOfKeysNeeded;
-
         private AudioSource _audioSource;
-
-        [SerializeField]private AudioClip[] _audioClipsArray;
+        public event Action OnWinGame;
+        
+        [SerializeField] private AudioClip[] _audioClipsArray;
 
         private void Start() {
             var keysGameObjsArray = GameObject.FindGameObjectsWithTag("Key");
@@ -16,7 +17,7 @@ namespace Player.Player_Collisions{
 
             _audioSource = GetComponent<AudioSource>();
             
-            print("Precisam de "+_numberOfKeysNeeded);
+            print($"Precisa de {_numberOfKeysNeeded} chaves");
 
         }
 
@@ -24,8 +25,7 @@ namespace Player.Player_Collisions{
             if (PlayerKeyInventory.KeyCount >= _numberOfKeysNeeded) {
                 _audioSource.clip = _audioClipsArray[0];
                 _audioSource.Play();
-                print("Abre-te sésamo");
-                
+                OnWinGame?.Invoke();
             }
             else if(!_audioSource.isPlaying) {
                 _audioSource.clip = _audioClipsArray[1];

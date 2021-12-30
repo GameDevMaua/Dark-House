@@ -14,10 +14,11 @@ namespace Game_Scripts.Monster.State_Machine{
             var stateMachinePlayer = _playerSingleton.GetComponent<PlayerStateMachineManager>();
 
             stateMachinePlayer.WalkingPlayerState.OnWalking += CheckIfItMustChangeState;
+            _monsterSingleton.AudioSource.Stop();
         }
 
         public override void executeState() {
-            WalkToNextKey(0.5f); //esse 0,5f não tem pq mudar, pois é só pra saber quando o monstro chegar na chave.
+            WalkToNextKey(0.5f); //esse 0.5f não tem pq mudar, pois é só pra saber quando o monstro chegar na chave.
             
             if(!_monsterSingleton.AudioSource.isPlaying)
                 _monsterSingleton.PlayAnAudioFromAudioArray(0);
@@ -38,8 +39,6 @@ namespace Game_Scripts.Monster.State_Machine{
             if (vectorToNextKey.magnitude <= distanceToNextKey) {
                 CurrentTarget++;
             }
-            
-            Debug.Log("Current index: "+ CurrentTarget);
         }
 
         private void CheckIfItMustChangeState() {

@@ -8,7 +8,7 @@ namespace Game_Scripts.Monster.State_Machine{
     public class MonsterStateMachineManager : MonoBehaviour, IStateMachineManager{
         private BaseMonsterState _currentState;
         private WalkingNearbyPlayerState _walkingNearbyPlayerState;
-        public WalkingRoutine _walkingRoutineState;
+        private WalkingRoutine _walkingRoutineState;
 
         [SerializeField] private float _monsterMovementSpeed;
         [SerializeField] private float _lastStateCooldown;
