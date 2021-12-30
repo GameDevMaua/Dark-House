@@ -48,12 +48,10 @@ namespace Game_Scripts.Monster.State_Machine{
             if (distanceToPlayer >= _distanceToGoBackToRoutineState) {
                 _stateMachine.ChangeCurrentState(_stateMachine.WalkingRoutineState);
             }
-
         }
 
         public override void OnStateExit() {
             _playerStateMachinePlayer.WalkingPlayerState.OnWalking -= VerifyIfTheGameIsOver;
-            _monsterRigidbody.velocity = Vector2.zero;
         }
 
 
@@ -62,11 +60,11 @@ namespace Game_Scripts.Monster.State_Machine{
 
                 var distance = (_playerSingleton.transform.position - _monsterSingleton.transform.position).magnitude;
 
-                if (distance <= _gameOverRadious) {
-                    OnGameOver?.Invoke();
-                } 
-                    
-
+                if (!(distance <= _gameOverRadious)) return;
+                
+                OnGameOver?.Invoke();
+                _stateMachine.ChangeCurrentState(_stateMachine.NullState);
+                
         }
          private void SubscribeAtOnWalkingEvent() {
              _playerStateMachinePlayer.WalkingPlayerState.OnWalking += VerifyIfTheGameIsOver;

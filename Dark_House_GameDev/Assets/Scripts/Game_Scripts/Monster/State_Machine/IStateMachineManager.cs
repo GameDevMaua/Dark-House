@@ -3,6 +3,7 @@
         WalkingNearbyPlayerState WalkingNearbyPlayerState { get; }
         WalkingRoutine WalkingRoutineState { get; }
         BaseMonsterState CurrentState { get; }
+        NullState NullState { get; }
 
         void ChangeCurrentState(BaseMonsterState nextState);
     }

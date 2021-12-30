@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using Player;
 using UnityEngine;
 
@@ -9,6 +8,7 @@ namespace Game_Scripts.Monster.State_Machine{
         private BaseMonsterState _currentState;
         private WalkingNearbyPlayerState _walkingNearbyPlayerState;
         private WalkingRoutine _walkingRoutineState;
+        private NullState _nullState;
 
         [SerializeField] private float _monsterMovementSpeed;
         [SerializeField] private float _lastStateCooldown;
@@ -21,6 +21,7 @@ namespace Game_Scripts.Monster.State_Machine{
         private void Awake() {
             _walkingRoutineState = new WalkingRoutine(this, _positionsRoutineArray, _monsterMovementSpeed, _angryModeRadius);
             _walkingNearbyPlayerState = new WalkingNearbyPlayerState(this, _monsterMovementSpeed*1.01f, _lastStateCooldown,_walkingEndRadius, _distanceToGoBackToRoutineState);
+            _nullState = new NullState(this);
         }
 
         private void Start() {
@@ -59,6 +60,7 @@ namespace Game_Scripts.Monster.State_Machine{
         public WalkingRoutine WalkingRoutineState => _walkingRoutineState;
 
         public BaseMonsterState CurrentState => _currentState;
-        
+
+        public NullState NullState => _nullState;
     }
 }
