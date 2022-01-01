@@ -27,7 +27,7 @@ namespace Player.State_Machine{
             _currentPlayerState.executeState();
         }
 
-        public void ChangeState(BasePlayerState nextPlayerState) {
+        public void ChangeCurrentState(BasePlayerState nextPlayerState) {
             _currentPlayerState.OnStateExit();
             _currentPlayerState = nextPlayerState;
             _currentPlayerState.OnStateEnter();

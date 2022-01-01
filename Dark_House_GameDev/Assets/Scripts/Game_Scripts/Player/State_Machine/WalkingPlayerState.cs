@@ -20,7 +20,7 @@ namespace Player.State_Machine{
         public override void executeState() {
             OnWalking?.Invoke();
             if (_playerRigidbody.velocity.magnitude <= _playerSingleton.MovingVelocity * 0.20f) {
-                PlayerStateMachine.ChangeState(PlayerStateMachine.IdlePlayerState);
+                PlayerStateMachine.ChangeCurrentState(PlayerStateMachine.IdlePlayerState);
             }
         }
 
