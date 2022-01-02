@@ -9,6 +9,7 @@ namespace Audio_Guides{
         }
 
         private void OnDrawGizmos() {
+            Gizmos.color = Color.cyan;
             Gizmos.DrawWireCube(transform.position, Vector3.one);
         }
     }
