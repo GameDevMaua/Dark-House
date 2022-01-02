@@ -5,7 +5,7 @@ namespace Player.Player_Collisions{
         private AudioSource _audioSource;
         private Collider2D _collider2D;
         private SpriteRenderer _spriteRenderer;
-
+        
         private void Start() {
             _audioSource = GetComponent<AudioSource>();
             
@@ -20,14 +20,15 @@ namespace Player.Player_Collisions{
 
             _collider2D = other.gameObject.GetComponent<Collider2D>();
             _spriteRenderer = other.gameObject.GetComponent<SpriteRenderer>();
-            
-            _audioSource.Play();
-            
+           
+            if (gameObject.activeInHierarchy) {
+                _audioSource.Play();
+            }
+
             _collider2D.enabled = false;
             _spriteRenderer.enabled = false;
             
             print($"Nós temos {PlayerKeyInventory.KeyCount} chaves");
-
         }
 
         protected override void OnDisable() {

@@ -5,7 +5,7 @@ namespace Audio_Guides{
     public class AudioGuideGizmos : MonoBehaviour
     {
         private void Awake() {
-            transform.position = new Vector3(transform.position.x, transform.position.y, PlayerSingleton.Instance.transform.position.z - 0.5f);
+            transform.position = new Vector3(transform.position.x, transform.position.y, PlayerSingleton.Instance.transform.position.z);
         }
 
         private void OnDrawGizmos() {
