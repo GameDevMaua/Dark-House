@@ -6737,6 +6737,10 @@ PrefabInstance:
       propertyPath: _audio
       value: 
       objectReference: {fileID: 8300000, guid: a2187ac68ecd80644afaab967aae8ab3, type: 3}
+    - target: {fileID: 2721143860358284480, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2721143860358284482, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -6785,6 +6789,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2721143860358284492, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
+      propertyPath: _endGameAudioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a2187ac68ecd80644afaab967aae8ab3, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
 --- !u!1001 &2133036737
