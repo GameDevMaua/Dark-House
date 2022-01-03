@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7113105802603166072}
   - component: {fileID: 3142466588693780172}
   m_Layer: 5
-  m_Name: Start
+  m_Name: Menu2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -41,7 +41,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 83c4925eb1045f24e81fdf5d9f488a9f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4003303d95ce09e429ae290d68c660fe, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
