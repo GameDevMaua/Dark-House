@@ -371,7 +371,7 @@ PrefabInstance:
     - target: {fileID: 283897093414550772, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 714e00760b9f43e4d94b34782b4f8ecf, type: 3}
+      objectReference: {fileID: 8300000, guid: 68fe47e84dbd98e4db4254e9771adfbd, type: 3}
     - target: {fileID: 7033116034330172729, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_Name
       value: Audio_Guides cozinha
@@ -448,7 +448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 283897093414550772, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: MinDistance
-      value: 2.647624
+      value: 0.92439556
       objectReference: {fileID: 0}
     - target: {fileID: 283897093414550772, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_audioClip
@@ -904,7 +904,7 @@ PrefabInstance:
     - target: {fileID: 283897093414550772, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 34fdc6b125c2fab45bf8ea038004cccd, type: 3}
+      objectReference: {fileID: 8300000, guid: e68ad2c12ccefb941bb74a67ecf34cbe, type: 3}
     - target: {fileID: 7033116034330172729, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_Name
       value: Audio_Guides sala de tv
@@ -5533,7 +5533,7 @@ PrefabInstance:
     - target: {fileID: 283897093414550772, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: ce59e8fa8c9048743b92e827709c7541, type: 3}
+      objectReference: {fileID: 8300000, guid: 9c6a4f2d43fe4334ea1ae6c422edbfb3, type: 3}
     - target: {fileID: 7033116034330172729, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_Name
       value: Audio_Guides corredor baixo
@@ -5672,7 +5672,7 @@ PrefabInstance:
     - target: {fileID: 283897093414550772, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 1b44d14b3f916e04c81c999bc85b9951, type: 3}
+      objectReference: {fileID: 8300000, guid: c03d8e5f487d7f8419fde59547621469, type: 3}
     - target: {fileID: 7033116034330172729, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_Name
       value: Audio_Guides corredor meio cima
@@ -6019,7 +6019,7 @@ PrefabInstance:
     - target: {fileID: 283897093414550772, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: ddddcb5e2cb137040a66b0ae71add17d, type: 3}
+      objectReference: {fileID: 8300000, guid: dc35c50a0fcca2243afa46cec992d3cf, type: 3}
     - target: {fileID: 7033116034330172729, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_Name
       value: Audio_Guides lavanderia cima
@@ -6175,7 +6175,7 @@ PrefabInstance:
     - target: {fileID: 283897093414550772, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 73e88a94386417a4ea3d0218267fe764, type: 3}
+      objectReference: {fileID: 8300000, guid: 0606e24013cb58e4eb4b9efaf95a6e7d, type: 3}
     - target: {fileID: 7033116034330172729, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_Name
       value: Audio_Guides corredor cima
@@ -6282,7 +6282,7 @@ PrefabInstance:
     - target: {fileID: 283897093414550772, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 6ae509db9793f6d43bd47689d92f96c4, type: 3}
+      objectReference: {fileID: 8300000, guid: 4bd057e7e0ee9e247a94f2c811d5e29c, type: 3}
     - target: {fileID: 7033116034330172729, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_Name
       value: Audio_Guides sala de jantar
@@ -6437,7 +6437,7 @@ PrefabInstance:
     - target: {fileID: 283897093414550772, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: d471aa92f62761942a9a37d6828960fd, type: 3}
+      objectReference: {fileID: 8300000, guid: 4eb234f4e40af914d80ed1ca81265a64, type: 3}
     - target: {fileID: 7033116034330172729, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_Name
       value: Audio_Guides corredor meio baixo
@@ -6524,7 +6524,7 @@ PrefabInstance:
     - target: {fileID: 283897093414550772, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 2c01dcd9e2975cd488a977f5d58b8d65, type: 3}
+      objectReference: {fileID: 8300000, guid: 68fe47e84dbd98e4db4254e9771adfbd, type: 3}
     - target: {fileID: 7033116034330172729, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_Name
       value: Audio_Guides lavanderia baixo
@@ -6723,12 +6723,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 283897093414550772, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: MinDistance
-      value: 1.5377107
+      value: 0.86756516
       objectReference: {fileID: 0}
     - target: {fileID: 283897093414550772, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: e9d370ecdbded4f4587d3a9295332e6c, type: 3}
+      objectReference: {fileID: 8300000, guid: 0606e24013cb58e4eb4b9efaf95a6e7d, type: 3}
     - target: {fileID: 7033116034330172729, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
       propertyPath: m_Name
       value: Audio_Guides quarto 1
@@ -6834,11 +6834,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2721143860358284482, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.02
+      value: -6.29
       objectReference: {fileID: 0}
     - target: {fileID: 2721143860358284482, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -14.48
+      value: -4.42
       objectReference: {fileID: 0}
     - target: {fileID: 2721143860358284482, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
       propertyPath: m_LocalPosition.z
