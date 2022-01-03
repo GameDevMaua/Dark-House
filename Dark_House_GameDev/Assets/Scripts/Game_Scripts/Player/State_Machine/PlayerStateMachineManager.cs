@@ -8,13 +8,16 @@ namespace Player.State_Machine{
       
         private WalkingPlayerState _walkingPlayerState;
         private IdlePlayerState _idlePlayerState;
+        private NullState _nullState;
 
         [SerializeField] private AudioSource _audioSource;
+        [SerializeField] private AudioClip _endGameAudioClip;
 
         
         private void Awake() {
             _walkingPlayerState = new WalkingPlayerState(this, _audioSource);
             _idlePlayerState = new IdlePlayerState(this);
+            _nullState = new NullState(this, _audioSource, _endGameAudioClip);
 
             _currentPlayerState = _idlePlayerState;
         }
@@ -27,7 +30,7 @@ namespace Player.State_Machine{
             _currentPlayerState.executeState();
         }
 
-        public void ChangeState(BasePlayerState nextPlayerState) {
+        public void ChangeCurrentState(BasePlayerState nextPlayerState) {
             _currentPlayerState.OnStateExit();
             _currentPlayerState = nextPlayerState;
             _currentPlayerState.OnStateEnter();
@@ -35,13 +38,10 @@ namespace Player.State_Machine{
         
         
         
-        public WalkingPlayerState WalkingPlayerState {
-            get => _walkingPlayerState;
-        }
+        public WalkingPlayerState WalkingPlayerState => _walkingPlayerState;
 
-        public IdlePlayerState IdlePlayerState {
-            get => _idlePlayerState;
-        }
-        
+        public IdlePlayerState IdlePlayerState => _idlePlayerState;
+
+        public NullState NullState => _nullState;
     }
 }

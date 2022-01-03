@@ -10,9 +10,6 @@ namespace Player{
 
         [SerializeField] private float _movingVelocity = 4f;
 
-        public float MovingVelocity {
-            get => _movingVelocity;
-        }
 
         private void Start() {
             _rigidbody2D = GetComponent<Rigidbody2D>();
@@ -27,5 +24,12 @@ namespace Player{
         private void FixedUpdate() {
             _rigidbody2D.velocity = Vector2.ClampMagnitude(new Vector2(_horizontalAxisInput, _verticalAxisInput) * _movingVelocity, _movingVelocity);
         }
+        
+        public float MovingVelocity => _movingVelocity;
+
+        public void SetMovingVeloctyToZero() {
+            _movingVelocity = 0f;
+        }
+
     }
 }

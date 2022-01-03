@@ -7,7 +7,7 @@ namespace Game_Scripts.Monster.State_Machine{
             _monsterSingleton.AudioSource.Stop();
         }
 
-        public NullState(IStateMachineManager stateMachineManager) : base(stateMachineManager) {
+        public NullState() {
         }
     }
 }

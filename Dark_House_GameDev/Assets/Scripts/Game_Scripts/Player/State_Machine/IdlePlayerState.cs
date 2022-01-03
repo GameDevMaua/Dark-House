@@ -5,7 +5,7 @@ namespace Player.State_Machine{
 
         public override void executeState() {
             if (_playerRigidbody.velocity.magnitude >= _playerSingleton.MovingVelocity) {
-                PlayerStateMachine.ChangeState(PlayerStateMachine.WalkingPlayerState);
+                PlayerStateMachine.ChangeCurrentState(PlayerStateMachine.WalkingPlayerState);
             }
             
             

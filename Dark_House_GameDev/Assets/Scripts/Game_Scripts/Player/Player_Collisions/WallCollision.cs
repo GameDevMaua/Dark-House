@@ -22,7 +22,6 @@ namespace Player.Player_Collisions{
                 _wallAudioSource.Play();
             }
             
-            print("bateu na parede");
         }
 
         private void _SetPositionInCollisionPoint(Collision2D other) {

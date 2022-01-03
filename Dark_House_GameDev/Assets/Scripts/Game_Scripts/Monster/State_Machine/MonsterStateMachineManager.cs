@@ -18,13 +18,13 @@ namespace Game_Scripts.Monster.State_Machine{
         [SerializeField] private Transform[] _positionsRoutineArray;
 
 
-        private void Awake() {
-            _walkingRoutineState = new WalkingRoutine(this, _positionsRoutineArray, _monsterMovementSpeed, _angryModeRadius);
-            _walkingNearbyPlayerState = new WalkingNearbyPlayerState(this, _monsterMovementSpeed*1.01f, _lastStateCooldown,_walkingEndRadius, _distanceToGoBackToRoutineState);
-            _nullState = new NullState(this);
+        private void Awake() { //instanciar os estados e injetando suas respectivas dependências
+            _walkingRoutineState = new WalkingRoutine( _positionsRoutineArray, _monsterMovementSpeed, _angryModeRadius);
+            _walkingNearbyPlayerState = new WalkingNearbyPlayerState( _monsterMovementSpeed*1.01f, _lastStateCooldown,_walkingEndRadius, _distanceToGoBackToRoutineState);
+            _nullState = new NullState();
         }
 
-        private void Start() {
+        private void Start() { //inicializando a State machine
             _currentState = _walkingRoutineState;
             _currentState.OnStateEnter();
         }
@@ -53,8 +53,7 @@ namespace Game_Scripts.Monster.State_Machine{
             Gizmos.color = new Color(1, 1, 0, 0.4f);
             Gizmos.DrawWireSphere(playerPosition, _distanceToGoBackToRoutineState);//end game radius
         }
-
-
+        
         public WalkingNearbyPlayerState WalkingNearbyPlayerState => _walkingNearbyPlayerState;
 
         public WalkingRoutine WalkingRoutineState => _walkingRoutineState;
