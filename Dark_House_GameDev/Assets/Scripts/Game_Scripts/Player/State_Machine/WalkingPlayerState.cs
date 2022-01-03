@@ -10,9 +10,9 @@ namespace Player.State_Machine{
         public event Action OnWalking;
 
 
-        public override void OnStateEnter() {
+        public override void OnStateEnter() { 
             _audioSource.Play();
-         SubscribeOnGameOverEvent(EndGame);   
+            SubscribeOnGameOverEvent(EndGame);   
         }
 
         public override void OnStateExit() {

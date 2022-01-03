@@ -6,11 +6,11 @@ namespace DefaultNamespace{
         private void Start() {
             var doorCollision = GameObject.FindWithTag("Door").GetComponent<DoorCollision>();
 
-            doorCollision.OnWinGame += kappa;
+            doorCollision.OnWinGame += WinningGame;
 
         }
 
-        public void kappa() {
+        public void WinningGame() {
             print("O evento de vencer o jogo foi chamado!");
         }
         

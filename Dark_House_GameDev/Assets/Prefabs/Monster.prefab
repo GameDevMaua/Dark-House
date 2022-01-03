@@ -98,14 +98,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab1cc4de0dfb42d39c01887423605a70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _initialCooldown: 5
-  _initialProbability: 1
   _monsterMovementSpeed: 2
-  _lastStateCooldown: 4
-  _spawnAroundPlayerRadious: 0
-  _walkingRandomlyRadious: 0
-  _walkingNearbyPlayerRadious: 0
-  _deactivateAndGoToPreSpanwStateRadious: 0
+  _lastStateCooldown: 1
+  _angryModeRadius: 7.01
+  _walkingEndRadius: 4
+  _distanceToGoBackToRoutineState: 10
+  _positionsRoutineArray:
+  - {fileID: 0}
 --- !u!114 &8981303290898221285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,8 +118,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClipsArray:
+  - {fileID: 8300000, guid: ac837d93f0727e44d934bac6681f84b1, type: 3}
   - {fileID: 8300000, guid: bda63328650fd8f42a9d83fce09c44bb, type: 3}
-  - {fileID: 8300000, guid: 05b423f06fb8bc84b842134398fa10c7, type: 3}
 --- !u!50 &8981303290898221281
 Rigidbody2D:
   serializedVersion: 4

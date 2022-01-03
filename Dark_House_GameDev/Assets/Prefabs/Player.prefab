@@ -41,7 +41,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 05b423f06fb8bc84b842134398fa10c7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 04c4b4d226bc7794ca26617752351f93, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -51,7 +51,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1.9546865
+  MinDistance: 0.72105515
   MaxDistance: 3.8343148
   Pan2D: 0
   rolloffMode: 0
@@ -210,7 +210,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 48e93eef0688c4a259cb0eddcd8661f7, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.03256239, g: 0.8018868, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -264,7 +264,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4ae3c51993eb6b5418513ab52d388f6c, type: 3}
+  m_audioClip: {fileID: 8300000, guid: aa2cc37fad11e064cbcba7b5352fa2f6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -421,6 +421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 2721143860358284480}
+  _endGameAudioClip: {fileID: 8300000, guid: a2187ac68ecd80644afaab967aae8ab3, type: 3}
 --- !u!114 &1642480882
 MonoBehaviour:
   m_ObjectHideFlags: 0
