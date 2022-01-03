@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &812826293
+--- !u!1 &394501853
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,36 +131,37 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 812826295}
-  - component: {fileID: 812826294}
+  - component: {fileID: 394501855}
+  - component: {fileID: 394501854}
   m_Layer: 0
-  m_Name: GameMenus.Implementations.PauseMenu
+  m_Name: PauseMenu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &812826294
+--- !u!114 &394501854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812826293}
-  m_Enabled: 0
+  m_GameObject: {fileID: 394501853}
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d3e5b52fb1e43048f364c095d96ad29, type: 3}
+  m_Script: {fileID: 11500000, guid: cb4e15649e9d7554284fe1f69aaf6cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _buttonsList: []
   _menuManager: {fileID: 1095891225}
---- !u!4 &812826295
+  _eventSystem: {fileID: 1752109724}
+--- !u!4 &394501855
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 812826293}
+  m_GameObject: {fileID: 394501853}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -197,9 +198,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca91d367e64e49bfb699c802b2011fe9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonPrefab: {fileID: 7815981023815266419, guid: 3c2dbcbdaa51c2f4592553aea3e3fb78, type: 3}
+  buttonPrefab: {fileID: 7815981023815266419, guid: 85c07789c968c6c43a384dbcdf766f90, type: 3}
   parent: {fileID: 1946910402}
-  _menuTemplateSelected: {fileID: 0}
+  menuTemplateAbstractClassSelected: {fileID: 0}
+  _firstMenuSelected: {fileID: 1970920167}
+  eventSystem: {fileID: 1752109724}
 --- !u!4 &1095891226
 Transform:
   m_ObjectHideFlags: 0
@@ -296,51 +299,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1521483152
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1521483154}
-  - component: {fileID: 1521483153}
-  m_Layer: 0
-  m_Name: GameMenus.Implementations.MainMenu
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1521483153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1521483152}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc69f4005aa4471695218f494aae6366, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _buttonsList: []
-  _menuManager: {fileID: 1095891225}
---- !u!4 &1521483154
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1521483152}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1646743224
 GameObject:
@@ -610,3 +568,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946910401}
   m_CullTransparentMesh: 1
+--- !u!1 &1970920166
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1970920168}
+  - component: {fileID: 1970920167}
+  m_Layer: 0
+  m_Name: MainMenu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1970920167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970920166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a1a76673a9eaac459d992a7f54b72b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _buttonsList: []
+  _menuManager: {fileID: 1095891225}
+  _eventSystem: {fileID: 1752109724}
+--- !u!4 &1970920168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970920166}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -3,6 +3,7 @@ using System.Linq;
 using System.Reflection;
 using Core;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace GameMenus
 {
@@ -11,9 +12,15 @@ namespace GameMenus
         public GameObject buttonPrefab;
         public Transform parent;
         
-        public event Action OnInputUp = () => print("input up");
-        public event Action OnInputDown= () => print("input down");
-        public event Action OnInputConfirm = () => print("enter input");
+        
+        [SerializeField]private MenuTemplateAbstractClass menuTemplateAbstractClassSelected;
+        public MenuTemplateAbstractClass _firstMenuSelected;
+        [SerializeField] private EventSystem eventSystem;
+        public event Action<MenuTemplateAbstractClass> OnMenuSelectionChanged = menu => { };
+
+        public event Action OnInputUp;// = () => print("input up");
+        public event Action OnInputDown;//= () => print("input down");
+        public event Action OnInputConfirm;// = () => print("enter input");
         private void Update()
         {
            
@@ -25,21 +32,25 @@ namespace GameMenus
                 OnInputConfirm?.Invoke();
         }
 
-        [SerializeField]private IMenuTemplate _menuTemplateSelected;
-        public event Action<IMenuTemplate> OnMenuSelectionChanged = menu => { };
-
-        public IMenuTemplate GetMenuSelected()
+        public void Start()
         {
-            return _menuTemplateSelected;
+            SelectMenu(_firstMenuSelected);
         }
-        public void SelectMenu(IMenuTemplate newMenuTemplateSelected)
+
+        public MenuTemplateAbstractClass GetMenuSelected()
         {
-            if(_menuTemplateSelected == newMenuTemplateSelected)
+            return menuTemplateAbstractClassSelected;
+        }
+        public void SelectMenu(MenuTemplateAbstractClass newMenuTemplateAbstractClassSelected)
+        {
+            if(menuTemplateAbstractClassSelected == newMenuTemplateAbstractClassSelected)
                 return;
-            _menuTemplateSelected?.DeSelect();
-            _menuTemplateSelected = newMenuTemplateSelected;
-            _menuTemplateSelected?.Select();
-            OnMenuSelectionChanged.Invoke(_menuTemplateSelected);
+            menuTemplateAbstractClassSelected?.DeSelect();
+            menuTemplateAbstractClassSelected?.gameObject.SetActive(false);
+            menuTemplateAbstractClassSelected = newMenuTemplateAbstractClassSelected;
+            menuTemplateAbstractClassSelected?.Select();
+            menuTemplateAbstractClassSelected?.gameObject.SetActive(true);
+            OnMenuSelectionChanged.Invoke(menuTemplateAbstractClassSelected);
         }
        
         [ContextMenu("rebuild menu")]
@@ -49,14 +60,14 @@ namespace GameMenus
 
             
 
-            Debug.LogWarning("on validating");
+            Debug.LogWarning("rebuilding menus");
 
             // var b = a.GetTypes();//.Where(type => type.IsAssignableFrom(typeof(Menu)));
             // foreach (var type in b)
             // {
             //    print(type.IsSubclassOf(typeof(MenuTemplate)));
             // }
-            foreach (var menuType in GetType().Assembly.GetTypes().Where(type => typeof(IMenuTemplate).IsAssignableFrom(type) && !type.IsAbstract) )
+            foreach (var menuType in GetType().Assembly.GetTypes().Where(type => typeof(MenuTemplateAbstractClass).IsAssignableFrom(type) && !type.IsAbstract) )
             {
                 print(menuType.FullName);
                 if (!GameObject.Find(menuType.FullName))
@@ -67,11 +78,11 @@ namespace GameMenus
         private void CreateNewMenu(Type menuType)
         {
             //print(menuType.FullName);
-            print(this);
-            var newGameObject = new GameObject(menuType.FullName);
-            var component = newGameObject.AddComponent(menuType) as IMenuTemplate;
-            print(this);
-            component.Inject(this);
+            //print(this);
+            var newGameObject = new GameObject(menuType.Name);
+            var component = newGameObject.AddComponent(menuType) as MenuTemplateAbstractClass;
+            //print(this);
+            component.Inject(this,eventSystem);
         }
     }
 }
