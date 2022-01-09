@@ -1,4 +1,5 @@
 ﻿using System;
+using Events;
 using Game_Scripts.Monster;
 using Game_Scripts.Monster.State_Machine;
 using UnityEngine;
@@ -28,18 +29,16 @@ namespace Player.State_Machine{
         }
 
         private void SubscribeOnGameOverEvent(Action function) {
-            var monsterStateMachine = MonsterSingleton.Instance.GetComponent<MonsterStateMachineManager>();
 
-            monsterStateMachine.WalkingNearbyPlayerState.OnGameOver += function;
+            EventManager.OnGameOver += function;
         }
         private void UnsubscribeOnGameOverEvent(Action function) {
-            var monsterStateMachine = MonsterSingleton.Instance.GetComponent<MonsterStateMachineManager>();
 
-            monsterStateMachine.WalkingNearbyPlayerState.OnGameOver -= function;
+            EventManager.OnGameOver -= function;
         }
         
         public void EndGame() {
-            PlayerStateMachine.ChangeCurrentState(PlayerStateMachine.NullState);
+            PlayerStateMachine.ChangeCurrentState(PlayerStateMachine.DeadState);
         }
 
         public WalkingPlayerState(PlayerStateMachineManager playerStateMachineManager, AudioSource audioSource) : base(playerStateMachineManager) {

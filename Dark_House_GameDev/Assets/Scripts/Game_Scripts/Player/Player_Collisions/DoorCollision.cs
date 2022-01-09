@@ -1,4 +1,5 @@
 ﻿using System;
+using Events;
 using Game_Scripts.Monster;
 using Game_Scripts.Monster.State_Machine;
 using UnityEngine;
@@ -8,7 +9,6 @@ namespace Player.Player_Collisions{
 
         private int _numberOfKeysNeeded;
         private AudioSource _audioSource;
-        public event Action OnWinGame;
         
         [SerializeField] private AudioClip[] _audioClipsArray;
 
@@ -27,7 +27,8 @@ namespace Player.Player_Collisions{
             if (PlayerKeyInventory.KeyCount >= _numberOfKeysNeeded && !_audioSource.isPlaying) {
                 _audioSource.clip = _audioClipsArray[0];
                 _audioSource.Play();
-                OnWinGame?.Invoke();
+
+                EventManager.InvokeOnGameWin();
 
                 var monsterStatemachine = MonsterSingleton.Instance.GetComponent<MonsterStateMachineManager>();
                 monsterStatemachine.ChangeCurrentState(monsterStatemachine.NullState);

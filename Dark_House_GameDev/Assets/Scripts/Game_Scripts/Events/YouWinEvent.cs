@@ -1,13 +1,11 @@
-﻿using Player.Player_Collisions;
+﻿using Events;
 using UnityEngine;
 
 namespace DefaultNamespace{
     public class YouWinEvent : MonoBehaviour{
         private void Start() {
-            var doorCollision = GameObject.FindWithTag("Door").GetComponent<DoorCollision>();
 
-            doorCollision.OnWinGame += WinningGame;
-
+            EventManager.OnGameWin += WinningGame;
         }
 
         public void WinningGame() {

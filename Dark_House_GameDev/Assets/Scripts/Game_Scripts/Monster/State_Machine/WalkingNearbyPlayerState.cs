@@ -1,4 +1,5 @@
 ﻿using System;
+using Events;
 using UnityEngine;
 
 namespace Game_Scripts.Monster.State_Machine{
@@ -10,8 +11,7 @@ namespace Game_Scripts.Monster.State_Machine{
         private bool _isSubscribedOnPlayerWalkingEvent;
         private float _gameOverRadius;
         private float _distanceToGoBackToRoutineState;
-
-        public event Action OnGameOver;
+        
 
         public override void OnStateEnter() {
             _velocityVector = (_playerSingleton.transform.position - _monsterSingleton.transform.position).normalized *
@@ -51,9 +51,8 @@ namespace Game_Scripts.Monster.State_Machine{
 
                 if (!(_distanceToPlayer <= _gameOverRadius)) return;
                 
-                OnGameOver?.Invoke();
+                EventManager.InvokeOnPlayerDeath();
                 _stateMachineMonster.ChangeCurrentState(_stateMachineMonster.NullState);
-                
         }
          private void SubscribeAtOnWalkingEvent() {
              _stateMachinePlayer.WalkingPlayerState.OnWalking += VerifyIfTheGameIsOver;

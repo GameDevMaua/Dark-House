@@ -10,7 +10,7 @@ namespace GameMenus.MyButtons.Implementation
     {
         protected override void OnInputConfirm()
         {
-            SceneManager.LoadScene("Definitive_Scene");
+            SceneManager.LoadScene("Main_level");
         }
     }
 }
