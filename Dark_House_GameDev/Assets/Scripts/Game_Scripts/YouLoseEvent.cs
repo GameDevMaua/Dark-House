@@ -14,9 +14,10 @@ namespace DefaultNamespace{
 
 
         public void DeactivateAllAudioGuides() {
-            var a = GameObject.FindGameObjectsWithTag("Guide");
+            var audioGuidesList = GameObject.FindGameObjectsWithTag("Guide");
+            print("Perdeste");
 
-            foreach (var item in a) {
+            foreach (var item in audioGuidesList) {
                 item.SetActive(false);
             }
         }

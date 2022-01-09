@@ -7,7 +7,7 @@ namespace Game_Scripts.Monster.State_Machine{
         private Vector3 _velocityVector;
         private float _cooldown;
         private float _timer;
-        private bool _jafoi;
+        private bool _isSubscribedOnPlayerWalkingEvent;
         private float _gameOverRadius;
         private float _distanceToGoBackToRoutineState;
 
@@ -18,16 +18,16 @@ namespace Game_Scripts.Monster.State_Machine{
                               _movementSpeed;
             _monsterRigidbody.velocity = _velocityVector;
             
-            _jafoi = false;
+            _isSubscribedOnPlayerWalkingEvent = false;
             Timer = _cooldown;
             _monsterSingleton.AudioSource.Stop();
 
         }
         
-        public override void executeState() { //todo:Esse jeito de ver se o evento já foi inscrito me parece horrível
+        public override void executeState() { 
             Timer -= Time.deltaTime;
-            if (Timer <= 0 && !_jafoi) {
-                _jafoi = true;
+            if (Timer <= 0 && !_isSubscribedOnPlayerWalkingEvent) {
+                _isSubscribedOnPlayerWalkingEvent = true;
                 SubscribeAtOnWalkingEvent();
             }
             

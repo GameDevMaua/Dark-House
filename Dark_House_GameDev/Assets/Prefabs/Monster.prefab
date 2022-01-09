@@ -105,6 +105,11 @@ MonoBehaviour:
   _distanceToGoBackToRoutineState: 10
   _positionsRoutineArray:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &8981303290898221285
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,8 +123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioClipsArray:
-  - {fileID: 8300000, guid: ac837d93f0727e44d934bac6681f84b1, type: 3}
-  - {fileID: 8300000, guid: bda63328650fd8f42a9d83fce09c44bb, type: 3}
+  - {fileID: 8300000, guid: 123402f3ce0e97349b43bc20b360d09b, type: 3}
+  - {fileID: 8300000, guid: e906312324cd3a5479502c4c3841ba4e, type: 3}
 --- !u!50 &8981303290898221281
 Rigidbody2D:
   serializedVersion: 4
