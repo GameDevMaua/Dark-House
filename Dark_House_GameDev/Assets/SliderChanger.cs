@@ -6,21 +6,16 @@ using UnityEngine.UI;
 public class SliderChanger : MonoBehaviour
 {
     public Image image;
-
     public Slider slider;
-    // Start is called before the first frame update
-    void Start()
+
+    private void Start()
     {
-        slider.onValueChanged.AddListener(onchange);
+        slider.onValueChanged.AddListener(OnChange);
+        slider.SetValueWithoutNotify(image.color.a);
     }
 
-    void onchange(float value)
+    private void OnChange(float value)
     {
         image.color = new Color(0,0,0,value);
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
