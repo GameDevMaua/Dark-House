@@ -33,5 +33,18 @@ namespace DefaultNamespace
             // Then return whatever was next, now that we're sure it's there
             return gameObject.transform.parent.GetChild (thisIndex - 1).gameObject;
         }
+        
+        public static GameObject GetLastChildren (this GameObject gameObject)
+        {
+            
+            return gameObject.transform.GetChild(gameObject.transform.childCount-1).gameObject;
+        }
+        public static GameObject GetFirstChildren (this GameObject gameObject)
+        {
+            
+            return gameObject.transform.GetChild(0).gameObject;
+        }
     }
+    
+   
 }
