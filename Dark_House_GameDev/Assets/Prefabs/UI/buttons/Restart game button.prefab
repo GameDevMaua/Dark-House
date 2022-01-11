@@ -93,6 +93,8 @@ GameObject:
   - component: {fileID: 1712223434391547003}
   - component: {fileID: 1712223434391547002}
   - component: {fileID: 1712223434391547005}
+  - component: {fileID: 817805969539186480}
+  - component: {fileID: 4099665937294143188}
   m_Layer: 5
   m_Name: Restart game
   m_TagString: Untagged
@@ -177,7 +179,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 3
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 1, g: 0.6273585, b: 0.6273585, a: 1}
@@ -310,6 +312,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8db7196f9b8748579eb3ca8c102a0bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &817805969539186480
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712223434391547007}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 915c5532006ec9b4da30b21dcb9cc532, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4099665937294143188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1712223434391547007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1cced1a1f47442e96030d46f006fb57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Main_level
+  delayTime: 1
 --- !u!1 &1712223434588153874
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,7 +354,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1712223434588153875}
-  - component: {fileID: 1712223434588153872}
   m_Layer: 5
   m_Name: Restart game button
   m_TagString: Untagged
@@ -336,7 +370,7 @@ RectTransform:
   m_GameObject: {fileID: 1712223434588153874}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 1712223434391547004}
   m_Father: {fileID: 0}
@@ -345,20 +379,5 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1712223434588153872
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1712223434588153874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1cced1a1f47442e96030d46f006fb57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: Main_level
-  sceneDarker: {fileID: 0}
-  delayTime: 1
