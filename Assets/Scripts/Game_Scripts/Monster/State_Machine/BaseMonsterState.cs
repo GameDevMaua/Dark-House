@@ -23,13 +23,17 @@ namespace Game_Scripts.Monster.State_Machine{
         }
         
         
-        public virtual void executeState() {
+        public virtual void OnExecuteState() {
         }
 
         public virtual void OnStateExit() {
+            _monsterSingleton.AudioSource.Stop();
+
         }
         
         public virtual void OnStateEnter() {
+            _monsterSingleton.AudioSource.Stop();
+
         }
 
     }
