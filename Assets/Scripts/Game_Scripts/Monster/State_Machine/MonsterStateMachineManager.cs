@@ -15,13 +15,14 @@ namespace Game_Scripts.Monster.State_Machine{
         [SerializeField] private float _changeToMoveTowardsPlayerRadius;
         [SerializeField] private float _distanceToSmellPlayerState;
         [SerializeField] private float _smellStateDurationInSeconds;
+        [SerializeField] private float _endGameCooldown;
         [SerializeField] private Transform[] _positionsRoutineArray;
 
 
         private void Awake() { //instanciar os estados e injetando suas respectivas dependências
             _walkingRoutineState = new WalkingRoutine( _positionsRoutineArray, _monsterMovementSpeed, _changeToMoveTowardsPlayerRadius);
             _walkingTowardsPlayerState = new WalkingTowardsPlayerState( _monsterMovementSpeed*1.01f, _distanceToSmellPlayerState);
-            _smellingState = new SmellingState(_smellStateDurationInSeconds);
+            _smellingState = new SmellingState(_smellStateDurationInSeconds, _endGameCooldown);
             _nullState = new NullState();
         }
 
@@ -44,13 +45,12 @@ namespace Game_Scripts.Monster.State_Machine{
 
         private void OnDrawGizmos() {
             var monsterPosition = MonsterSingleton.Instance.transform.position;
-            var playerPosition = PlayerSingleton.Instance.transform.position;
             
             Gizmos.color = new Color(0, 0, 1, 0.4f);
             Gizmos.DrawSphere(monsterPosition, _changeToMoveTowardsPlayerRadius); //random state radius
 
             Gizmos.color = new Color(1, 0, 0, 0.4f);
-            Gizmos.DrawWireSphere(playerPosition, _distanceToSmellPlayerState);//end game radius
+            Gizmos.DrawWireSphere(monsterPosition, _distanceToSmellPlayerState);//end game radius
         }
         
 
