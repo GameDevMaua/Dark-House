@@ -1,5 +1,7 @@
 ﻿using System;
+using Game_Scripts.Scriptable_Objects;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 namespace Player.State_Machine{
     [Serializable]
@@ -12,10 +14,13 @@ namespace Player.State_Machine{
 
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private AudioClip _endGameAudioClip;
+        [SerializeField] private Tilemap _tilemap;
+        [SerializeField] private SpriteSoundDictionary _soundDictionary;
+        [SerializeField] private AudioClip _defaultStepSound;
 
         
         private void Awake() {
-            _walkingPlayerState = new WalkingPlayerState(this, _audioSource);
+            _walkingPlayerState = new WalkingPlayerState(this, _audioSource, _tilemap, _soundDictionary, _defaultStepSound);
             _idlePlayerState = new IdlePlayerState(this);
             _deadState = new DeadState(this, _audioSource, _endGameAudioClip);
 

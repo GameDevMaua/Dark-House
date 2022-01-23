@@ -264,7 +264,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: aa2cc37fad11e064cbcba7b5352fa2f6, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d8ed0dbdaac2b65409998a1f49cffd7f, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -422,6 +422,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 2721143860358284480}
   _endGameAudioClip: {fileID: 8300000, guid: a2187ac68ecd80644afaab967aae8ab3, type: 3}
+  _tilemap: {fileID: 0}
+  _soundDictionary: {fileID: 11400000, guid: b404a5bde8a38d040b63c222e8c84a0b, type: 2}
+  _defaultStepSound: {fileID: 8300000, guid: d8ed0dbdaac2b65409998a1f49cffd7f, type: 3}
 --- !u!114 &1642480882
 MonoBehaviour:
   m_ObjectHideFlags: 0
