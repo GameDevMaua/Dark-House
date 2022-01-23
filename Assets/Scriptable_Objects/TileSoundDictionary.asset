@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   keyList:
   - Chao_Madeira
-  - Piso_Molhado
   - Grama
   valueList:
-  - {fileID: 8300000, guid: f4cd0d0b83cceb145b0a85428fde32bc, type: 3}
-  - {fileID: 8300000, guid: 34fdc6b125c2fab45bf8ea038004cccd, type: 3}
-  - {fileID: 8300000, guid: ddddcb5e2cb137040a66b0ae71add17d, type: 3}
+  - {fileID: 8300000, guid: aa2cc37fad11e064cbcba7b5352fa2f6, type: 3}
+  - {fileID: 8300000, guid: 5ad92c54c3f49654db8d62382e5f559b, type: 3}
