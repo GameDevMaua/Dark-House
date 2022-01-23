@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: TileSoundDictionary
   m_EditorClassIdentifier: 
   keyList:
-  - idiota
-  - forest-tileset_177
+  - Chao_Madeira
+  - Piso_Molhado
   valueList:
-  - {fileID: 8300000, guid: 2c01dcd9e2975cd488a977f5d58b8d65, type: 3}
+  - {fileID: 8300000, guid: f4cd0d0b83cceb145b0a85428fde32bc, type: 3}
   - {fileID: 8300000, guid: 34fdc6b125c2fab45bf8ea038004cccd, type: 3}

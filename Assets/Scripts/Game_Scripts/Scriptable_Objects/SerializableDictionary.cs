@@ -11,15 +11,13 @@ namespace Game_Scripts.Scriptable_Objects{
         protected virtual void OnEnable() {
             dictionary = new Dictionary<K, V>();
             for (var i = 0; i < keyList.Count; i++) {
-                dictionary.Add(keyList[i], valueList[i]);
+                if(!(i >= valueList.Count))
+                    dictionary.Add(keyList[i], valueList[i]);
             }
         }
     
         protected virtual void OnDisable() {
             dictionary = new Dictionary<K, V>();
-            for (var i = 0; i < keyList.Count; i++) {
-                dictionary.Add(keyList[i], valueList[i]);
-            }
         }
     }
 }

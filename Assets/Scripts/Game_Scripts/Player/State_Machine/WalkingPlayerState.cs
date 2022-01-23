@@ -22,7 +22,6 @@ namespace Player.State_Machine{
         }
 
         public override void OnStateExit() {
-            _audioSource.Stop();
             UnsubscribeOnGameOverEvent(EndGame);
         }
 

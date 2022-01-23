@@ -2735,7 +2735,7 @@ GameObject:
   - component: {fileID: 5170165164195101424}
   - component: {fileID: 5959397133399124385}
   m_Layer: 31
-  m_Name: LevelPallet
+  m_Name: TemporaryPallet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
