@@ -290,7 +290,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: d8ed0dbdaac2b65409998a1f49cffd7f, type: 3}
     - target: {fileID: 2721143860358284482, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2721143860358284482, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
       propertyPath: m_LocalPosition.x
@@ -380,7 +380,7 @@ Transform:
   m_Children:
   - {fileID: 1793717422}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &159725514
 PrefabInstance:
@@ -1363,11 +1363,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5948115805cd67b40897ed5c8488de62, type: 3}
---- !u!1 &911913497 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2721143860110303191, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
-  m_PrefabInstance: {fileID: 128841797}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1008096284
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1731,7 +1726,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1281763594
 GameObject:
@@ -1842,6 +1837,11 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3997394442403048024, guid: 05d94c7caa355ef42b6592240ff1c154, type: 3}
   m_PrefabInstance: {fileID: 1440704879}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1350826167 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2721143860110303191, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
+  m_PrefabInstance: {fileID: 128841797}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &1393590698 stripped
 Transform:
@@ -5021,7 +5021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cc1a83f23a741769e9c167092b70a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wallAudioSourceGameObject: {fileID: 911913497}
+  _wallAudioSourceGameObject: {fileID: 1350826167}
 --- !u!1001 &1796552454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5268,7 +5268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6146419120021732986, guid: b8181ac80cf20fa45b8ec7f1f868a0a5, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6146419120021732986, guid: b8181ac80cf20fa45b8ec7f1f868a0a5, type: 3}
       propertyPath: m_LocalPosition.x
