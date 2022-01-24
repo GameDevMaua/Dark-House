@@ -7,6 +7,7 @@ namespace Player.State_Machine{
         protected Rigidbody2D _playerRigidbody;
         
         
+        
         protected BasePlayerState(PlayerStateMachineManager playerStateMachineManager) {
             PlayerStateMachine = playerStateMachineManager;
             _playerSingleton = PlayerSingleton.Instance;

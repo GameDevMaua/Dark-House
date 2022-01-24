@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Testing_Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Testing_Scenes/Scene_Lucas.unity
     guid: 01722bf654dd4e6409d923aa4a213c68
   - enabled: 1
@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Died_Scene.unity
     guid: 4989d5f347cbc3b489227e16f5a598f4
+  - enabled: 1
+    path: Assets/Scenes/Main_level2.0.unity
+    guid: eca978044ab3eff47a99ebebbf6881a4
   m_configObjects: {}

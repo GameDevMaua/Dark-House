@@ -1,6 +1,4 @@
-﻿using UnityEngine;
-
-namespace Player.State_Machine{
+﻿namespace Player.State_Machine{
     public class IdlePlayerState : BasePlayerState{
 
         public override void executeState() {

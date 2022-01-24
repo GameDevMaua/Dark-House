@@ -1,5 +1,4 @@
 ﻿using System;
-using Player.State_Machine;
 using UnityEngine;
 
 namespace Game_Scripts.Monster.State_Machine{
@@ -14,7 +13,7 @@ namespace Game_Scripts.Monster.State_Machine{
             _stateMachinePlayer.WalkingPlayerState.OnWalking += CheckIfItMustChangeState;
         }
 
-        public override void executeState() {
+        public override void OnExecuteState() {
             WalkToNextKey(0.5f); //esse 0.5f não tem pq mudar, pois é só pra saber quando o monstro chegar na chave.
             
             if(!_monsterSingleton.AudioSource.isPlaying)
@@ -37,7 +36,7 @@ namespace Game_Scripts.Monster.State_Machine{
 
         private void CheckIfItMustChangeState() {
             if (_distanceToPlayer <= _angryStateRadius) 
-                _stateMachineMonster.ChangeCurrentState(_stateMachineMonster.WalkingNearbyPlayerState);
+                _stateMachineMonster.ChangeCurrentState(_stateMachineMonster.WalkingTowardsPlayerState);
             
         }
         
