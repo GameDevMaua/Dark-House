@@ -20,7 +20,7 @@ namespace Player.Player_Collisions{
         
         protected override void defaultMethod(Collision2D other) {
             if(!_wallAudioSource.isPlaying) {
-                // _SetAudioClipInAudioSource(other);
+                _SetAudioClipInAudioSource(other);
                 _SetPositionInCollisionPoint(other);
                 _wallAudioSource.Play();
             }
@@ -28,10 +28,15 @@ namespace Player.Player_Collisions{
         }
 
         private void _SetAudioClipInAudioSource(Collision2D other) {
-            var collisionPoint = _GetCollisionPoint(other);
-            var collidedTilePosition = new Vector3Int(Mathf.RoundToInt(collisionPoint.x), Mathf.RoundToInt(collisionPoint.y), 0);
+            Vector3 collisionPoint = _GetCollisionPoint(other);
 
-            var collidedTileName = _wallsTilemap.GetTile(collidedTilePosition).name;
+            var directionFromPlayertoCollisionPoint = (collisionPoint - PlayerSingleton.Instance.transform.position).normalized;
+
+            var tileWorldPosition = collisionPoint + directionFromPlayertoCollisionPoint * 0.5f;
+
+            var collidedTile = _wallsTilemap.GetTile(_wallsTilemap.WorldToCell(tileWorldPosition));
+
+            var collidedTileName = collidedTile.name;
 
             var newAudioClip = _defaultSound;
 
