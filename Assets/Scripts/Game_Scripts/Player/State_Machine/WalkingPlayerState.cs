@@ -8,7 +8,7 @@ namespace Player.State_Machine{
     public class WalkingPlayerState : BasePlayerState{
         private AudioSource _audioSource;
 
-        private SpriteSoundDictionary _soundDictionary;
+        private StringSoundDictionary _soundDictionary;
         private Tilemap _tilemap;
         private AudioClip _defaultAudioClip;
         
@@ -65,7 +65,7 @@ namespace Player.State_Machine{
             PlayerStateMachine.ChangeCurrentState(PlayerStateMachine.DeadState);
         }
 
-        public WalkingPlayerState(PlayerStateMachineManager playerStateMachineManager, AudioSource audioSource, Tilemap tilemap, SpriteSoundDictionary soundDictionary,
+        public WalkingPlayerState(PlayerStateMachineManager playerStateMachineManager, AudioSource audioSource, Tilemap tilemap, StringSoundDictionary soundDictionary,
             AudioClip defaultAudioClip) : base(playerStateMachineManager) {
             _audioSource = audioSource;
             _tilemap = tilemap;

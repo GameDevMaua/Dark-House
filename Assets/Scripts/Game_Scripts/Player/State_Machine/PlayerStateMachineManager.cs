@@ -15,7 +15,7 @@ namespace Player.State_Machine{
         [SerializeField] private AudioSource _audioSource;
         [SerializeField] private AudioClip _endGameAudioClip;
         [SerializeField] private Tilemap _tilemap;
-        [SerializeField] private SpriteSoundDictionary _soundDictionary;
+        [SerializeField] private StringSoundDictionary _soundDictionary;
         [SerializeField] private AudioClip _defaultStepSound;
 
         
