@@ -1,7 +1,5 @@
 ﻿using System;
 using Events;
-using Game_Scripts.Monster;
-using Game_Scripts.Monster.State_Machine;
 using Game_Scripts.Scriptable_Objects;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -30,7 +28,7 @@ namespace Player.State_Machine{
             UpdateAudioClipOnAudioSource();
             
             if(!_audioSource.isPlaying)
-                _audioSource.Play();
+                _audioSource.PlayDelayed(0.5f);
             
             if (_playerRigidbody.velocity.magnitude <= _playerSingleton.MovingVelocity * 0.20f) {
                 PlayerStateMachine.ChangeCurrentState(PlayerStateMachine.IdlePlayerState);

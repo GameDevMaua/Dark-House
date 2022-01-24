@@ -15,7 +15,6 @@ namespace Player.Player_Collisions{
         }
 
         
-        
         protected override void defaultMethod(Collision2D other) {
             if(!_wallAudioSource.isPlaying) {
                 _SetPositionInCollisionPoint(other);
