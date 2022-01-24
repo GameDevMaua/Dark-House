@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58ab6a8e9393441aaf402bc5763e1653, type: 3}
   m_Name: SoundCollisionDictionary
   m_EditorClassIdentifier: 
-  keyList: []
-  valueList: []
+  keyList:
+  - Grama
+  valueList:
+  - {fileID: 8300000, guid: 7131d701ae015a54aa3d856feccd513f, type: 3}
