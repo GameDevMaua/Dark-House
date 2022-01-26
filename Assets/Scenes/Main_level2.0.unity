@@ -14953,6 +14953,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 931054856}
     m_Modifications:
+    - target: {fileID: 191799398329417248, guid: 05d94c7caa355ef42b6592240ff1c154, type: 3}
+      propertyPath: MaxDistance
+      value: 3.4428234
+      objectReference: {fileID: 0}
     - target: {fileID: 3997394442403048024, guid: 05d94c7caa355ef42b6592240ff1c154, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -15659,7 +15663,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3997394442403048024, guid: 05d94c7caa355ef42b6592240ff1c154, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.09
+      value: 0.87
       objectReference: {fileID: 0}
     - target: {fileID: 3997394442403048024, guid: 05d94c7caa355ef42b6592240ff1c154, type: 3}
       propertyPath: m_LocalPosition.z

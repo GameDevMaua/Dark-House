@@ -728,6 +728,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 280632077}
     m_Modifications:
+    - target: {fileID: 4739086710831429305, guid: 1893d6cf59e575b4caaee5d257d858ea, type: 3}
+      propertyPath: sceneName
+      value: Main_level2.0
+      objectReference: {fileID: 0}
     - target: {fileID: 7331947045114960352, guid: 1893d6cf59e575b4caaee5d257d858ea, type: 3}
       propertyPath: m_Name
       value: Start game button

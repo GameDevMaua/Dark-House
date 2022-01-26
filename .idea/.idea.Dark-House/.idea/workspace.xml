@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f99ab651-87c5-417c-b55d-8d8644f6c567" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Player/Player_Collisions/WallCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Player/Player_Collisions/WallCollision.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dark-House/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dark-House/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main_level2.0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main_level2.0.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu_Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Won_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Won_Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable_Objects/SoundCollisionDictionary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable_Objects/SoundCollisionDictionary.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +68,7 @@
       <workItem from="1642943619911" duration="10183000" />
       <workItem from="1642981896379" duration="3850000" />
       <workItem from="1642993775231" duration="536000" />
+      <workItem from="1643233319182" duration="1887000" />
     </task>
     <servers />
   </component>
