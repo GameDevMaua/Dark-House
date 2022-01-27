@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Testing_Scenes/Scene_Lucas.unity
     guid: 01722bf654dd4e6409d923aa4a213c68
   - enabled: 1
-    path: Assets/Scenes/Main_level.unity
+    path: Assets/Scenes/Testing_Scenes/Main_level.unity
     guid: e623a24239d382446816c9748199b9e6
   - enabled: 1
     path: Assets/Scenes/Won_Scene.unity
