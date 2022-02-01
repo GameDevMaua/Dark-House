@@ -10,6 +10,7 @@ namespace GameMenus.MyButtons
 
         protected override void OnButtonClicked()
         {
+            Time.timeScale = 1;
            sceneDarker.SetTrigger("change scene"); 
            StartCoroutine(LeaveAfterSeconds(delayTime));
         }

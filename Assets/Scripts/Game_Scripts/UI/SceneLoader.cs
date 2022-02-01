@@ -12,6 +12,7 @@ namespace GameMenus
         public float delayTime;
         protected override void OnButtonClicked()
         {
+            Time.timeScale = 1;
             sceneDarker.SetTrigger("change scene");
             StartCoroutine(LoadAfterSeconds(delayTime));
         }
@@ -19,6 +20,11 @@ namespace GameMenus
         IEnumerator LoadAfterSeconds(float time)
         {
             yield return new WaitForSeconds(time);
+            Load();
+        }
+
+        public void Load()
+        {
             sceneDarker.speed = 0;
             SceneManager.LoadScene(sceneName);
         }
