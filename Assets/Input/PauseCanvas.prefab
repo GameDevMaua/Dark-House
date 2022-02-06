@@ -718,6 +718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlackCover
       objectReference: {fileID: 0}
+    - target: {fileID: 4830510978080141419, guid: 8f530fbf50137ca4cac8817390822982, type: 3}
+      propertyPath: m_TagString
+      value: BlackCover
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f530fbf50137ca4cac8817390822982, type: 3}
 --- !u!224 &1612534690882586861 stripped

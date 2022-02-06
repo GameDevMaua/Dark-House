@@ -1,7 +1,4 @@
-﻿using System;
-using UnityEditor;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace GameMenus
@@ -10,9 +7,9 @@ namespace GameMenus
     {
         private Button _button;
         protected  Animator sceneDarker;
-        private void Start()
+        protected virtual void Start()
         {
-            sceneDarker = GameObject.Find("BlackCover").GetComponentInChildren<Animator>();
+            sceneDarker = GameObject.Find("BlackCover").GetComponent<Animator>();
             _button = GetComponentInChildren<Button>();
             _button.onClick.AddListener(OnButtonClicked);
         }

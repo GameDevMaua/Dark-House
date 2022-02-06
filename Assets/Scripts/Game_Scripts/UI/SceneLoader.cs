@@ -10,8 +10,17 @@ namespace GameMenus
         public string sceneName;
         
         public float delayTime;
+
+        // protected override void Start() {
+        //     
+        // }
+        
         protected override void OnButtonClicked()
+        
         {
+            base.Start();
+            print(sceneDarker);
+
             Time.timeScale = 1;
             sceneDarker.SetTrigger("change scene");
             StartCoroutine(LoadAfterSeconds(delayTime));

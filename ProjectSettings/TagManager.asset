@@ -9,6 +9,7 @@ TagManager:
   - Door
   - Monster
   - Guide
+  - BlackCover
   layers:
   - Default
   - TransparentFX
