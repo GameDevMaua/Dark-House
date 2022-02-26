@@ -15647,7 +15647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16b0d9df20024ceaabf420cecef239db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _numberOfKeys: 3
+  _numberOfKeys: 5
 --- !u!1001 &1502163788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15813,10 +15813,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2721143860110303189, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 734fc863729209941aec806fbbc1d4d0, type: 3}
     - target: {fileID: 2721143860358284482, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
       propertyPath: m_RootOrder
       value: 4
