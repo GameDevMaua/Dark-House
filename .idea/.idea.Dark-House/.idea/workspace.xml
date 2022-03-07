@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f99ab651-87c5-417c-b55d-8d8644f6c567" name="Changes" comment="" />
+    <list default="true" id="f99ab651-87c5-417c-b55d-8d8644f6c567" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dark-House/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dark-House/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main_level2.0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main_level2.0.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Player/State_Machine/WalkingPlayerState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Player/State_Machine/WalkingPlayerState.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,6 +79,7 @@
       <workItem from="1643287495516" duration="829000" />
       <workItem from="1644172101223" duration="1482000" />
       <workItem from="1645888650628" duration="555000" />
+      <workItem from="1646264923893" duration="1835000" />
     </task>
     <servers />
   </component>

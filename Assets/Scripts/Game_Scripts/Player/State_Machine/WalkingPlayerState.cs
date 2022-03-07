@@ -28,7 +28,7 @@ namespace Player.State_Machine{
             UpdateAudioClipOnAudioSource();
             
             if(!_audioSource.isPlaying)
-                _audioSource.PlayDelayed(0.3f);
+                _audioSource.PlayDelayed(0.54f);
             
             if (_playerRigidbody.velocity.magnitude <= _playerSingleton.MovingVelocity * 0.20f) {
                 PlayerStateMachine.ChangeCurrentState(PlayerStateMachine.IdlePlayerState);
