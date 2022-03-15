@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="f99ab651-87c5-417c-b55d-8d8644f6c567" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dark-House/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dark-House/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main_level2.0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main_level2.0.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Second_level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Second_level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Pause.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +96,8 @@
       <workItem from="1646688805030" duration="4140000" />
       <workItem from="1646778768006" duration="1549000" />
       <workItem from="1646825839519" duration="3613000" />
+      <workItem from="1646865856632" duration="1959000" />
+      <workItem from="1647089719696" duration="617000" />
     </task>
     <servers />
   </component>
