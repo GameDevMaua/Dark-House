@@ -1,46 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Game_Scripts.Keys_Manager;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class KeyCounterManager : MonoBehaviour
 {
     public InputAction actionEvent;
-    public GameObject keys;
     public List<AudioClip> AudioClips = new List<AudioClip>();
-    public List<GameObject> keys2;
     public AudioSource audioSource;
+
+    private KeyManager _keyManager;
+    private List<KeyController> _collectedKeys = new List<KeyController>();
+
     void Start()
     {
         actionEvent.Enable();
         actionEvent.performed += CallBack;
 
-        foreach (Transform key in keys.transform)
-        {
-            if (key.gameObject.activeInHierarchy)
-            {
-                keys2.Add(key.gameObject);
-            }
-        }
+        _keyManager = KeyManager.Instance;
+
+        _keyManager.CollectedEvent += OnKeyCollected;
+    }
+
+    private void OnKeyCollected(KeyController key)
+    {
+        _collectedKeys.Add(key);
     }
 
     private void CallBack(InputAction.CallbackContext obj)
     {
-        /*print(obj.phase);
-        int count = 0;
-        foreach (Transform key in keys.transform)
-        {
-            var active = key.GetComponent<Collider2D>().enabled && key.gameObject.activeInHierarchy;
-            if (active)
-            {
-                count += 1;
-            }
-        }
         
-        print(count);*/
-
-        var count = keys2.Count((o => !o.GetComponent<Collider2D>().enabled));
+        var count =_collectedKeys.Count;
         StartCoroutine(SoundCoroutine(count));
     }
 
@@ -53,10 +45,5 @@ public class KeyCounterManager : MonoBehaviour
             yield return wait;
         } 
         yield break;
-    }
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
