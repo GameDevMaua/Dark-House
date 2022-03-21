@@ -141,11 +141,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2721143860358284482, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.64
+      value: 18.04
       objectReference: {fileID: 0}
     - target: {fileID: 2721143860358284482, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.89
+      value: -0.71
       objectReference: {fileID: 0}
     - target: {fileID: 2721143860358284482, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4183,7 +4183,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1496454944015738028, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
       propertyPath: m_Name
-      value: Area_Fantasmagorica (1)
+      value: Phatom_Area
       objectReference: {fileID: 0}
     - target: {fileID: 1496454944015738030, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
       propertyPath: m_Size.x
@@ -14149,13 +14149,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1496454944015738018, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
-      propertyPath: _currentTimer
-      value: 0
+    - target: {fileID: 1496454944015738016, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
+      propertyPath: _audioClipsList.Array.size
+      value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1496454944015738016, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
+      propertyPath: _audioClipsList.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: a2187ac68ecd80644afaab967aae8ab3, type: 3}
     - target: {fileID: 1496454944015738028, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
       propertyPath: m_Name
-      value: Area_Fantasmagorica
+      value: Phatom_Area
       objectReference: {fileID: 0}
     - target: {fileID: 1496454944015738031, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
       propertyPath: m_RootOrder

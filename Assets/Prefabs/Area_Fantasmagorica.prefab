@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1496454944015738031}
   - component: {fileID: 1496454944015738030}
   - component: {fileID: 1496454944015738029}
-  - component: {fileID: 1496454944015738018}
   - component: {fileID: 1496454944015738017}
   - component: {fileID: 1496454944015738016}
+  - component: {fileID: 1594227411}
   m_Layer: 0
   m_Name: Area_Fantasmagorica
   m_TagString: Untagged
@@ -73,20 +73,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 551e6d998e841054e87ed39e67b789a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1496454944015738018
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496454944015738028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f8eb7718618407e8e4ad8cfdecd5aa7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _initialTimer: 10
-  _currentTimer: 0
 --- !u!82 &1496454944015738017
 AudioSource:
   m_ObjectHideFlags: 0
@@ -198,3 +184,16 @@ MonoBehaviour:
   _audioClipsList:
   - {fileID: 8300000, guid: d471aa92f62761942a9a37d6828960fd, type: 3}
   - {fileID: 8300000, guid: a2187ac68ecd80644afaab967aae8ab3, type: 3}
+--- !u!114 &1594227411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496454944015738028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90e32a0d642d45b783e1267aa83d8d0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maximumTimer: 10

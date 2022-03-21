@@ -6,32 +6,33 @@ using UnityEngine;
 
 public class Ghost2Timer : MonoBehaviour{
     [SerializeField] private float _initialTimer;
-    [SerializeField] private float _currentTimer; //deixei serializado apenas para facilitar o debug no inspetor
+    
+    private float _currentTimer;
     private int _audioListLenght;
     private bool _timerIsRunning;
+    private CheckIfPlayerWithinArea _checkIfPlayerWithinArea;
 
     public static event Action<int> CurrentTimerPartIsEvent; 
 
     private void Awake() {
         _currentTimer = _initialTimer;
-    }
-
-    private void Start() {
+        _checkIfPlayerWithinArea = GetComponent<CheckIfPlayerWithinArea>();
         _audioListLenght = GetComponent<GhostAudioHandler>().AudioListLength;
-    }
 
+    }
+    
     private void OnEnable() {
-        CheckIfPlayerWithinArea.PlayerEnteredAreaEvent += StartTimerCoroutine;
-        CheckIfPlayerWithinArea.PlayerLeftedAreaEvent += FinishTimerAndRestartIt;
+        _checkIfPlayerWithinArea.PlayerEnteredAreaEvent += StartTimerCoroutine;
+        _checkIfPlayerWithinArea.PlayerLeftAreaEvent += FinishTimerAndRestartIt;
     }
 
     private void OnDisable() {
-        CheckIfPlayerWithinArea.PlayerEnteredAreaEvent -= StartTimerCoroutine;
-        CheckIfPlayerWithinArea.PlayerLeftedAreaEvent -= FinishTimerAndRestartIt;
+        _checkIfPlayerWithinArea.PlayerEnteredAreaEvent -= StartTimerCoroutine;
+        _checkIfPlayerWithinArea.PlayerLeftAreaEvent -= FinishTimerAndRestartIt;
     }
 
     public void StartTimerCoroutine() {
-        CurrentTimerPartIsEvent?.Invoke(0);
+        StopCoroutine(ReverseTimerCoroutine());
         _timerIsRunning = true;
         StartCoroutine(TimerCoroutine());
     }
@@ -39,13 +40,13 @@ public class Ghost2Timer : MonoBehaviour{
     public void FinishTimerAndRestartIt() {        
         _timerIsRunning = false;
         StopCoroutine(TimerCoroutine());
-        _currentTimer = _initialTimer;
+        StartCoroutine(ReverseTimerCoroutine());
     }
 
     private void CallEventsInEveryTimerPart() {
         var timerDividedIn = _initialTimer / _audioListLenght;
         var currentTimerIsDivisible = (_currentTimer % timerDividedIn) == 0 ;
-
+        
         if (currentTimerIsDivisible && _currentTimer != 0) {
             var indexInAudioList = (int) (_currentTimer / timerDividedIn);
             
@@ -58,6 +59,9 @@ public class Ghost2Timer : MonoBehaviour{
     
     private IEnumerator TimerCoroutine() {
         while (_currentTimer > 0 && _timerIsRunning) {
+            if(_currentTimer == _initialTimer)
+                CurrentTimerPartIsEvent?.Invoke(0);
+            
             _currentTimer -= 0.5f;
             CallEventsInEveryTimerPart();
             yield return new WaitForSeconds(0.5f);
@@ -65,4 +69,10 @@ public class Ghost2Timer : MonoBehaviour{
         }
     }
     
+    private IEnumerator ReverseTimerCoroutine() {
+        while (_currentTimer < _initialTimer && !_timerIsRunning) {
+            _currentTimer += 0.5f;
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
 }

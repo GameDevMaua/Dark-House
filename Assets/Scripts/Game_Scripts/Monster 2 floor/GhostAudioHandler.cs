@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 namespace DefaultNamespace.Monster_2_floor{
@@ -8,18 +7,19 @@ namespace DefaultNamespace.Monster_2_floor{
         [SerializeField] private List<AudioClip> _audioClipsList;
         private AudioSource _audioSource;
 
+        private AreaTimer _areaTimer;
+        
         private void Awake() {
             _audioSource = GetComponent<AudioSource>();
+            _areaTimer = GetComponent<AreaTimer>();
         }
 
         private void OnEnable() {
-            Ghost2Timer.CurrentTimerPartIsEvent += PlayAnAudioFromList;
-            CheckIfPlayerWithinArea.PlayerLeftedAreaEvent += StopPlayingAudios;
+            _areaTimer._timerFractionHandler.TimerIndexEvent += PlayAnAudioFromList;
         }
 
         private void OnDisable() {
-            Ghost2Timer.CurrentTimerPartIsEvent -= PlayAnAudioFromList;
-            CheckIfPlayerWithinArea.PlayerLeftedAreaEvent -= StopPlayingAudios;
+            _areaTimer._timerFractionHandler.TimerIndexEvent -= PlayAnAudioFromList;
         }
 
         public void PlayAnAudioFromList(int index) {
