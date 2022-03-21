@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f99ab651-87c5-417c-b55d-8d8644f6c567" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dark-House/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dark-House/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Area_Fantasmagorica.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Area_Fantasmagorica.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Monster 2 floor/CheckIfPlayerWithinArea.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Monster 2 floor/CheckIfPlayerWithinArea.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Monster 2 floor/Ghost2Timer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Monster 2 floor/Ghost2Timer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Monster 2 floor/AreaTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Monster 2 floor/AreaTimer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Monster 2 floor/GhostAudioHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Monster 2 floor/GhostAudioHandler.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +92,7 @@
       <workItem from="1643287495516" duration="829000" />
       <workItem from="1644172101223" duration="1482000" />
       <workItem from="1646261995387" duration="2296000" />
-      <workItem from="1647895055473" duration="7269000" />
+      <workItem from="1647895055473" duration="7859000" />
     </task>
     <servers />
   </component>

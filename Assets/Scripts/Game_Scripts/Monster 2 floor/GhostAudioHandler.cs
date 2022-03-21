@@ -15,11 +15,11 @@ namespace DefaultNamespace.Monster_2_floor{
         }
 
         private void OnEnable() {
-            _areaTimer._timerFractionHandler.TimerIndexEvent += PlayAnAudioFromList;
+            _areaTimer.TimerFractionHandler.TimerIndexEvent += PlayAnAudioFromList;
         }
 
         private void OnDisable() {
-            _areaTimer._timerFractionHandler.TimerIndexEvent -= PlayAnAudioFromList;
+            _areaTimer.TimerFractionHandler.TimerIndexEvent -= PlayAnAudioFromList;
         }
 
         public void PlayAnAudioFromList(int index) {
