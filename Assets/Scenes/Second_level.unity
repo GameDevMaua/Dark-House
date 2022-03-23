@@ -14149,6 +14149,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1594227411, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
+      propertyPath: maximumTimer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1496454944015738016, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
       propertyPath: _audioClipsList.Array.size
       value: 2

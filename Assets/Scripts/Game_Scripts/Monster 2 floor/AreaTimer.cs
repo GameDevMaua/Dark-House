@@ -41,7 +41,7 @@ namespace DefaultNamespace.Monster_2_floor{
                 currentTimer += Time.deltaTime;
             }
             else {
-                currentTimer -= Time.deltaTime;
+                currentTimer -= Time.deltaTime * 1.5f;
             }
             currentTimer = Mathf.Clamp(currentTimer, 0, maximumTimer);
 
