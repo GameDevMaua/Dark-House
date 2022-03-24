@@ -15,7 +15,7 @@ namespace Game_Scripts.Keys_Manager
 
         private void OnCollecting()
         {
-            
+            gameObject.SetActive(false);
         }
     }
 }
