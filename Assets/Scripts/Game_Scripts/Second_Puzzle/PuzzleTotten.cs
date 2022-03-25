@@ -16,7 +16,7 @@ namespace DefaultNamespace.Second_Puzzle{
         //Mas concordo que o novo seria bemmm melhor e mais performático
 
         private void Update() {
-            if (Input.GetKeyDown(KeyCode.E) && _checkIfPlayerWithinArea.IsInArea) {
+            if (Input.GetKeyDown(KeyCode.Space) && _checkIfPlayerWithinArea.IsInArea) {
                 _puzzleManager.CheckIfInputObjIsRight(gameObject);
             }
         }

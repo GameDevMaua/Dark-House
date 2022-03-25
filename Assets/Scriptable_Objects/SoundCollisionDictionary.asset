@@ -21,6 +21,7 @@ MonoBehaviour:
   - Mesa
   - Cama
   - Armario
+  - Telescopio
   valueList:
   - {fileID: 8300000, guid: 7131d701ae015a54aa3d856feccd513f, type: 3}
   - {fileID: 8300000, guid: 82b5c9362a4637c4791194b3a78a08e5, type: 3}
@@ -30,3 +31,4 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 021f2a3562490b44db304303b51fa0f8, type: 3}
   - {fileID: 8300000, guid: dd298becc892bca488823020380df2aa, type: 3}
   - {fileID: 8300000, guid: a9519ab225bae164d99b45b02c547eb6, type: 3}
+  - {fileID: 8300000, guid: 82b5c9362a4637c4791194b3a78a08e5, type: 3}

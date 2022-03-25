@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8070694359209013647}
   - component: {fileID: 1424921363426070581}
   - component: {fileID: 2393145830439018741}
+  - component: {fileID: 565183059195839959}
   m_Layer: 0
   m_Name: Puzzle_Totten
   m_TagString: Untagged
@@ -195,5 +196,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _failAudioResponse: {fileID: 8300000, guid: 1eb41ea8a74ed074b80282b4242e1b39, type: 3}
-  _sucessfullAudioResponse: {fileID: 8300000, guid: a9519ab225bae164d99b45b02c547eb6, type: 3}
-  _defaultAudio: {fileID: 8300000, guid: ce59e8fa8c9048743b92e827709c7541, type: 3}
+  _sucessfullAudioResponse: {fileID: 8300000, guid: 1eb41ea8a74ed074b80282b4242e1b39, type: 3}
+  _defaultAudio: {fileID: 0}
+--- !u!114 &565183059195839959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8070694359209013644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf386a3181c48404e9218dfba528b9dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

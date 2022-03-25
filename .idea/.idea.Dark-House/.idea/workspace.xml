@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f99ab651-87c5-417c-b55d-8d8644f6c567" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dark-House/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dark-House/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzle_Totten.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzle_Totten.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Second_level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Second_level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable_Objects/SoundCollisionDictionary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable_Objects/SoundCollisionDictionary.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Second_Puzzle/PuzzleTotten.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Second_Puzzle/PuzzleTotten.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,6 +97,7 @@
       <workItem from="1647895055473" duration="7859000" />
       <workItem from="1648074703885" duration="5487000" />
       <workItem from="1648122498791" duration="5791000" />
+      <workItem from="1648211292664" duration="628000" />
     </task>
     <servers />
   </component>
