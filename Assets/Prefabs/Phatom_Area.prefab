@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1496454944015738016}
   - component: {fileID: 1594227411}
   m_Layer: 0
-  m_Name: Area_Fantasmagorica
+  m_Name: Phatom_Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -196,4 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90e32a0d642d45b783e1267aa83d8d0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maximumTimer: 10
+  maximumTimer: 100
+  currentTimer: 0
+  TimerFractionHandler:
+    _boolsList: 
