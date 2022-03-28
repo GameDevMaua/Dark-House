@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f99ab651-87c5-417c-b55d-8d8644f6c567" name="Changes" comment="" />
+    <list default="true" id="f99ab651-87c5-417c-b55d-8d8644f6c567" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Dark-House/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dark-House/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzle_Totten.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzle_Totten.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Second_level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Second_level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable_Objects/SoundCollisionDictionary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable_Objects/SoundCollisionDictionary.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Second_Puzzle/PuzzleTotten.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Second_Puzzle/PuzzleTotten.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,7 +37,6 @@
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -90,7 +95,9 @@
       <workItem from="1644172101223" duration="1482000" />
       <workItem from="1646261995387" duration="2296000" />
       <workItem from="1647895055473" duration="7859000" />
-      <workItem from="1648077060034" duration="6252000" />
+      <workItem from="1648074703885" duration="5487000" />
+      <workItem from="1648122498791" duration="5791000" />
+      <workItem from="1648211292664" duration="628000" />
     </task>
     <servers />
   </component>
@@ -110,6 +117,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

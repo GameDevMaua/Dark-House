@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1496454944015738028
+--- !u!1 &8070694359209013644
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,73 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1496454944015738031}
-  - component: {fileID: 1496454944015738030}
-  - component: {fileID: 1496454944015738029}
-  - component: {fileID: 1496454944015738017}
-  - component: {fileID: 1496454944015738016}
-  - component: {fileID: 1594227411}
+  - component: {fileID: 8070694359209013680}
+  - component: {fileID: 8070694359209013681}
+  - component: {fileID: 8070694359209013646}
+  - component: {fileID: 8070694359209013647}
+  - component: {fileID: 1424921363426070581}
+  - component: {fileID: 2393145830439018741}
+  - component: {fileID: 565183059195839959}
   m_Layer: 0
-  m_Name: Area_Fantasmagorica
+  m_Name: Puzzle_Totten
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1496454944015738031
+--- !u!4 &8070694359209013680
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496454944015738028}
+  m_GameObject: {fileID: 8070694359209013644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 25.03, y: -9.77, z: -25.382423}
+  m_LocalPosition: {x: 12.49, y: -4.87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1496454944015738030
+--- !u!114 &8070694359209013681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8070694359209013644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 551e6d998e841054e87ed39e67b789a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8070694359209013646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8070694359209013644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bc5d7b1fef84b8f818031cf31f67de7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _puzzleManager: {fileID: 0}
+--- !u!61 &8070694359209013647
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496454944015738028}
+  m_GameObject: {fileID: 8070694359209013644}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.42520714, y: 0.17508483}
+  m_Offset: {x: 1.346518, y: -1.0283439}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -59,44 +85,32 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 15.35696, y: 11.254972}
+  m_Size: {x: 6.109439, y: 3.0566878}
   m_EdgeRadius: 0
---- !u!114 &1496454944015738029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496454944015738028}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 551e6d998e841054e87ed39e67b789a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!82 &1496454944015738017
+--- !u!82 &1424921363426070581
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496454944015738028}
+  m_GameObject: {fileID: 8070694359209013644}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: dc35c50a0fcca2243afa46cec992d3cf, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 1.0747738
+  MaxDistance: 5.9622617
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -129,7 +143,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -169,31 +183,30 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1496454944015738016
+--- !u!114 &2393145830439018741
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496454944015738028}
+  m_GameObject: {fileID: 8070694359209013644}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cc15f94d518407696920532e44db5d0, type: 3}
+  m_Script: {fileID: 11500000, guid: f7fbf4a0aff04e7f93bcc9c0c13d4554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _audioClipsList:
-  - {fileID: 8300000, guid: d471aa92f62761942a9a37d6828960fd, type: 3}
-  - {fileID: 8300000, guid: a2187ac68ecd80644afaab967aae8ab3, type: 3}
---- !u!114 &1594227411
+  _failAudioResponse: {fileID: 8300000, guid: 1eb41ea8a74ed074b80282b4242e1b39, type: 3}
+  _sucessfullAudioResponse: {fileID: 8300000, guid: 1eb41ea8a74ed074b80282b4242e1b39, type: 3}
+  _defaultAudio: {fileID: 0}
+--- !u!114 &565183059195839959
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1496454944015738028}
+  m_GameObject: {fileID: 8070694359209013644}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90e32a0d642d45b783e1267aa83d8d0c, type: 3}
+  m_Script: {fileID: 11500000, guid: bf386a3181c48404e9218dfba528b9dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _maximumTimer: 10

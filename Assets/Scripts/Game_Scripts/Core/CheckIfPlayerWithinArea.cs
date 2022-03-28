@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 
+[RequireComponent(typeof(Collider2D))]
 public class CheckIfPlayerWithinArea : MonoBehaviour{
     public bool IsInArea { get; set; }
     public event Action PlayerEnteredAreaEvent;

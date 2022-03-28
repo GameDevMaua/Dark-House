@@ -5,7 +5,7 @@ namespace DefaultNamespace.Monster_2_floor{
     [Serializable]
     public class TimerFractionHandler{
         private int _indexMax;
-        private float _maxTime;
+        private float _maxTime = 50f;
 
        [SerializeField] private bool[] _boolsList;
         public event Action<int> TimerIndexEvent;
