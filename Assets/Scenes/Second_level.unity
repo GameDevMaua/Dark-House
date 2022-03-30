@@ -5756,7 +5756,7 @@ PrefabInstance:
     - target: {fileID: 2393145830439018741, guid: e91c71d6b29f8b741aadcfe54de19ad3, type: 3}
       propertyPath: _defaultAudio
       value: 
-      objectReference: {fileID: 8300000, guid: 021f2a3562490b44db304303b51fa0f8, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 8070694359209013644, guid: e91c71d6b29f8b741aadcfe54de19ad3, type: 3}
       propertyPath: m_Name
       value: Puzzle_Totten_mesa_sacada
