@@ -6,10 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="f99ab651-87c5-417c-b55d-8d8644f6c567" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dark-House/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dark-House/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzle_Totten.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzle_Totten.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Second_level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Second_level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scriptable_Objects/SoundCollisionDictionary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable_Objects/SoundCollisionDictionary.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Second_Puzzle/PuzzleTotten.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Second_Puzzle/PuzzleTotten.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main_level2.0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main_level2.0.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Keys_Manager/KeyCollectionHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Keys_Manager/KeyCollectionHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Keys_Manager/KeyCollectorTrigger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Keys_Manager/KeyCollectorTrigger.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Keys_Manager/KeyController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Keys_Manager/KeyController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Keys_Manager/KeyCounterManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Keys_Manager/KeyCounterManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Keys_Manager/KeyManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Keys_Manager/KeyManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Player/PlayerKeyInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Player/PlayerKeyInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Player/Player_Collisions/DoorCollision.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Player/Player_Collisions/DoorCollision.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,6 +103,7 @@
       <workItem from="1648074703885" duration="5487000" />
       <workItem from="1648122498791" duration="5791000" />
       <workItem from="1648211292664" duration="628000" />
+      <workItem from="1648856974978" duration="2728000" />
     </task>
     <servers />
   </component>

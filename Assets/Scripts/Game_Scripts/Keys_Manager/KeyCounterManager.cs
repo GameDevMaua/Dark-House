@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Game_Scripts.Keys_Manager;
+using Player;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -27,6 +28,7 @@ public class KeyCounterManager : MonoBehaviour
     private void OnKeyCollected(KeyController key)
     {
         _collectedKeys.Add(key);
+        PlayerKeyInventory.AddOneKey();
     }
 
     private void CallBack(InputAction.CallbackContext obj)

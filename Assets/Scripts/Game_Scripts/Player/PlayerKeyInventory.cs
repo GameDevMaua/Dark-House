@@ -9,6 +9,7 @@ namespace Player{
             get => _keyCountInInventory;
         }
         
+
         public static void AddOneKey() {
             _keyCountInInventory++;
         }

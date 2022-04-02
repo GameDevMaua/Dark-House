@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Game_Scripts.Keys_Manager
 {
@@ -15,7 +14,6 @@ namespace Game_Scripts.Keys_Manager
 
         private void OnCollecting()
         {
-            gameObject.SetActive(false);
         }
     }
 }

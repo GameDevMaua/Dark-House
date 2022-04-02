@@ -1,6 +1,5 @@
 ﻿using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Game_Scripts.Keys_Manager
 {
@@ -27,6 +26,7 @@ namespace Game_Scripts.Keys_Manager
         {
             _currentActive = false;
             OnDeActivatingEvent?.Invoke();
+            
             // todo: fazer todos os gameobjs começarem ativos, e dps com essa função e a função de cima, setar tudo para os sons tocarem corretamente
             // e quando tiver sido coletado tocar um som diferente
             // quando desativado tocar outro som
@@ -40,5 +40,10 @@ namespace Game_Scripts.Keys_Manager
             _collected = true;
             OnCollectingEvent?.Invoke();
         }
+
+
+        public bool CurrentActive => _currentActive;
+
+        public bool Collected => _collected;
     }
 }

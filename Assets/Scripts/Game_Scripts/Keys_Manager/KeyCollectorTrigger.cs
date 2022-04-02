@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Game_Scripts.Keys_Manager
 {
@@ -14,7 +13,7 @@ namespace Game_Scripts.Keys_Manager
 
         private void OnTriggerEnter2D(Collider2D col)
         {
-            if (col.gameObject.CompareTag("Player"))
+            if (col.gameObject.CompareTag("Player") && _keyController.CurrentActive)
             {
                 _keyController.Collect();
             }

@@ -1,5 +1,6 @@
-﻿using System;
+﻿using System.Linq;
 using Events;
+using Game_Scripts.Keys_Manager;
 using Game_Scripts.Monster;
 using Game_Scripts.Monster.State_Machine;
 using UnityEngine;
@@ -13,9 +14,9 @@ namespace Player.Player_Collisions{
         [SerializeField] private AudioClip[] _audioClipsArray;
 
         private void Start() {
-            var keysGameObjsArray = GameObject.FindGameObjectsWithTag("Key");
+            var keysGameObjsArray = GameObject.FindGameObjectsWithTag("Key").Where(key => key.GetComponent<KeyController>().CurrentActive);
 
-            _numberOfKeysNeeded = keysGameObjsArray.Length;
+            _numberOfKeysNeeded = keysGameObjsArray.Count();
 
             _audioSource = GetComponent<AudioSource>();
             

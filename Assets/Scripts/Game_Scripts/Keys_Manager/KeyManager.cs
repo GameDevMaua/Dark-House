@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Core;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 namespace Game_Scripts.Keys_Manager{
@@ -13,10 +12,8 @@ namespace Game_Scripts.Keys_Manager{
         public event Action<KeyController> ActivatedEvent;
         public event Action<KeyController> CollectedEvent;
         
-        
         [SerializeField] private int numberOfKeys;
-        private void Awake() 
-        {
+        private void Awake() {
             foreach (Transform childTransform in transform)
             {
                 var keyController = childTransform.GetComponent<KeyController>();
@@ -28,8 +25,8 @@ namespace Game_Scripts.Keys_Manager{
             
             var newKeyControllers = _keysList.OrderBy(controller => Random.value).Take(numberOfKeys);
             
-            foreach (var keyController in newKeyControllers)
-            {
+            foreach (var keyController in newKeyControllers){
+                
                 keyController.OnActivatingEvent += () => { ActivatedEvent?.Invoke(keyController); };
                 keyController.OnCollectingEvent += () => { CollectedEvent?.Invoke(keyController); };
                 
