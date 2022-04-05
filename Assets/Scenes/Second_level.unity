@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 168545656}
     m_Modifications:
+    - target: {fileID: 1594227411, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
+      propertyPath: maximumTimer
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1496454944015738028, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
       propertyPath: m_Name
       value: Phatom_Area_sacada
@@ -328,11 +332,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2721143860358284482, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.04
+      value: 14.7
       objectReference: {fileID: 0}
     - target: {fileID: 2721143860358284482, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.71
+      value: 7.86
       objectReference: {fileID: 0}
     - target: {fileID: 2721143860358284482, guid: 1d4ff5e5390ade3498810ab3d7355bec, type: 3}
       propertyPath: m_LocalPosition.z
@@ -383,6 +387,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 168545656}
     m_Modifications:
+    - target: {fileID: 1594227411, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
+      propertyPath: maximumTimer
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1496454944015738028, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
       propertyPath: m_Name
       value: Phatom_Area_banheiro_corredor
@@ -601,6 +609,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 168545656}
     m_Modifications:
+    - target: {fileID: 1594227411, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
+      propertyPath: maximumTimer
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1496454944015738017, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
       propertyPath: MaxDistance
       value: 50
@@ -5143,6 +5155,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 168545656}
     m_Modifications:
+    - target: {fileID: 1594227411, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
+      propertyPath: maximumTimer
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 1496454944015738028, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
       propertyPath: m_Name
       value: Phatom_Area_Corredor1
@@ -5262,7 +5278,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1594227411, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
       propertyPath: maximumTimer
-      value: 100
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1496454944015738028, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
       propertyPath: m_Name
@@ -15906,7 +15922,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1594227411, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
       propertyPath: maximumTimer
-      value: 100
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1496454944015738016, guid: 976d90642cebf5c4ca8d7940b5b11747, type: 3}
       propertyPath: _audioClipsList.Array.size

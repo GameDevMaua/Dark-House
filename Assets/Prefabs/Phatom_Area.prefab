@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90e32a0d642d45b783e1267aa83d8d0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maximumTimer: 100
+  maximumTimer: 20
   currentTimer: 0
   TimerFractionHandler:
     _boolsList: 
