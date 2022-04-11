@@ -512,7 +512,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1.6692019
+  MinDistance: 1.5061808
   MaxDistance: 6.748169
   Pan2D: 0
   rolloffMode: 1
@@ -6051,6 +6051,10 @@ PrefabInstance:
     - target: {fileID: 6146419120021732986, guid: b8181ac80cf20fa45b8ec7f1f868a0a5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6555548261101713703, guid: b8181ac80cf20fa45b8ec7f1f868a0a5, type: 3}
+      propertyPath: loseSceneName
+      value: Died_Scene_SecondLevel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b8181ac80cf20fa45b8ec7f1f868a0a5, type: 3}
