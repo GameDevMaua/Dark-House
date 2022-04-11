@@ -14,7 +14,7 @@ namespace Game_Scripts.Monster.State_Machine{
             _MoveTowardsPlayer();
 
             if(!_monsterSingleton.AudioSource.isPlaying)
-                _monsterSingleton.PlayAnAudioFromAudioArray(1);
+                _monsterSingleton.PlayASoundFromWalkingToPlayerArray();
 
             if (_distanceToPlayer <= _distanceToSmellPlayerState) {
                 _stateMachineMonster.ChangeCurrentState(_stateMachineMonster.SmellingState); //ir para o estado de cheirar o player

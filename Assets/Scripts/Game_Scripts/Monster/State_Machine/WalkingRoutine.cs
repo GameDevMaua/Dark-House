@@ -17,7 +17,7 @@ namespace Game_Scripts.Monster.State_Machine{
             WalkToNextKey(0.5f); //esse 0.5f não tem pq mudar, pois é só pra saber quando o monstro chegar na chave.
             
             if(!_monsterSingleton.AudioSource.isPlaying)
-                _monsterSingleton.PlayAnAudioFromAudioArray(0);
+                _monsterSingleton.PlayASoundFromWalkingAroundArray();
         }
         
         

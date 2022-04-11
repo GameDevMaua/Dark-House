@@ -10,7 +10,7 @@ namespace Game_Scripts.Monster.State_Machine{
 
         public override void OnStateEnter() {
             base.OnStateEnter();
-            _monsterSingleton.PlayAnAudioFromAudioArray(2);
+            _monsterSingleton.PlayBreathingSound();
             
             _monsterRigidbody.velocity = Vector3.zero;
 

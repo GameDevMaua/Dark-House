@@ -10998,6 +10998,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8981303290898221285, guid: 36b6940c2ca1d9b4895505a76b59fdf1, type: 3}
+      propertyPath: _audioClipBreathing
+      value: 
+      objectReference: {fileID: 8300000, guid: af6edb08e1f686041a968120f681aff9, type: 3}
+    - target: {fileID: 8981303290898221285, guid: 36b6940c2ca1d9b4895505a76b59fdf1, type: 3}
       propertyPath: _audioClipsArray.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -11013,6 +11017,30 @@ PrefabInstance:
       propertyPath: _audioClipsArray.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: af6edb08e1f686041a968120f681aff9, type: 3}
+    - target: {fileID: 8981303290898221285, guid: 36b6940c2ca1d9b4895505a76b59fdf1, type: 3}
+      propertyPath: _audioClipsArrayWalkingAround.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981303290898221285, guid: 36b6940c2ca1d9b4895505a76b59fdf1, type: 3}
+      propertyPath: _audioClipsArrayWalkingToPlayer.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981303290898221285, guid: 36b6940c2ca1d9b4895505a76b59fdf1, type: 3}
+      propertyPath: _audioClipsArrayWalkingAround.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: aa2cc37fad11e064cbcba7b5352fa2f6, type: 3}
+    - target: {fileID: 8981303290898221285, guid: 36b6940c2ca1d9b4895505a76b59fdf1, type: 3}
+      propertyPath: _audioClipsArrayWalkingAround.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: edf3b8750abce58408076c441ad2fc2d, type: 3}
+    - target: {fileID: 8981303290898221285, guid: 36b6940c2ca1d9b4895505a76b59fdf1, type: 3}
+      propertyPath: _audioClipsArrayWalkingAround.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 123402f3ce0e97349b43bc20b360d09b, type: 3}
+    - target: {fileID: 8981303290898221285, guid: 36b6940c2ca1d9b4895505a76b59fdf1, type: 3}
+      propertyPath: _audioClipsArrayWalkingToPlayer.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: e906312324cd3a5479502c4c3841ba4e, type: 3}
     - target: {fileID: 8981303290898221286, guid: 36b6940c2ca1d9b4895505a76b59fdf1, type: 3}
       propertyPath: _endGameCooldown
       value: 1.5
