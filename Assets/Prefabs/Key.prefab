@@ -248,6 +248,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe51c5eb68094dd7a827cbf7190024b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _activedSound: {fileID: 8300000, guid: 714e00760b9f43e4d94b34782b4f8ecf, type: 3}
-  _deactivedSound: {fileID: 8300000, guid: a9519ab225bae164d99b45b02c547eb6, type: 3}
-  _collectedSound: {fileID: 8300000, guid: 021f2a3562490b44db304303b51fa0f8, type: 3}
+  _activedSound: {fileID: 8300000, guid: c5ea27f626e7ed34c8d1b8be91f2cc0c, type: 3}
+  _deactivedSound: {fileID: 0}
+  _collectedSound: {fileID: 8300000, guid: 1eb41ea8a74ed074b80282b4242e1b39, type: 3}

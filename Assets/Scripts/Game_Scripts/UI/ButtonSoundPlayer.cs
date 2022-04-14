@@ -1,7 +1,5 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UIElements;
 
 namespace Game_Scripts.GameMenus
 {
@@ -11,7 +9,7 @@ namespace Game_Scripts.GameMenus
 
         private void Start()
         {
-            _audioSource = GetComponentInChildren<AudioSource>();
+            _audioSource = GetComponent<AudioSource>();
             if (_audioSource is null)
             {
                 Debug.LogWarning("no audio source found on this gameObject");
