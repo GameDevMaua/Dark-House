@@ -3,6 +3,7 @@ using UnityEngine.EventSystems;
 
 namespace Game_Scripts.GameMenus
 {
+    [RequireComponent(typeof(AudioSource))]
     public class ButtonSoundPlayer: MonoBehaviour , ISelectHandler, IDeselectHandler
     {
         private AudioSource _audioSource;
