@@ -6,7 +6,6 @@ namespace DefaultNamespace.Monster_2_floor{
     public class GhostAudioHandler : MonoBehaviour{
         [SerializeField] private List<AudioClip> _audioClipsList;
         private AudioSource _audioSource;
-
         private AreaTimer _areaTimer;
         
         private void Awake() {
@@ -16,10 +15,13 @@ namespace DefaultNamespace.Monster_2_floor{
 
         private void OnEnable() {
             _areaTimer.TimerFractionHandler.TimerIndexEvent += PlayAnAudioFromList;
+            PauseManager.OnGamePauseEvent += StopPlayingAudios;
+            PauseManager.OnGameResumeEvent += _audioSource.Play;
         }
 
         private void OnDisable() {
             _areaTimer.TimerFractionHandler.TimerIndexEvent -= PlayAnAudioFromList;
+            PauseManager.OnGamePauseEvent -= StopPlayingAudios;
         }
 
         public void PlayAnAudioFromList(int index) {
@@ -29,7 +31,8 @@ namespace DefaultNamespace.Monster_2_floor{
             _audioSource.clip = _audioClipsList[index];
             _audioSource.Play();
         }
-
+        
+        
         public void StopPlayingAudios() {
             _audioSource.Stop();
         }

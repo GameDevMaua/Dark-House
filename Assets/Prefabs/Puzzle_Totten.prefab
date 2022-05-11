@@ -107,8 +107,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1.0747738
-  MaxDistance: 5.9622617
+  MinDistance: 1.4155855
+  MaxDistance: 7.327896
   Pan2D: 0
   rolloffMode: 1
   BypassEffects: 0
@@ -195,9 +195,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7fbf4a0aff04e7f93bcc9c0c13d4554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _failAudioResponse: {fileID: 8300000, guid: 1eb41ea8a74ed074b80282b4242e1b39, type: 3}
+  _failAudioResponse: {fileID: 8300000, guid: 8ae9175e9c445904b838e4035e4dbcc1, type: 3}
   _sucessfullAudioResponse: {fileID: 8300000, guid: 1eb41ea8a74ed074b80282b4242e1b39, type: 3}
-  _defaultAudio: {fileID: 0}
+  _defaultAudio: {fileID: 8300000, guid: dc35c50a0fcca2243afa46cec992d3cf, type: 3}
 --- !u!114 &565183059195839959
 MonoBehaviour:
   m_ObjectHideFlags: 0

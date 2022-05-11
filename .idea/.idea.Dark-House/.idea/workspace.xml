@@ -6,10 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="f99ab651-87c5-417c-b55d-8d8644f6c567" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Dark-House/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Dark-House/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input/PauseCanvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input/PauseCanvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/PauseManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/PauseManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Phatom_Area.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Phatom_Area.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Puzzle_Totten.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Puzzle_Totten.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main_level2.0.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main_level2.0.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu_Scene.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Second_level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Second_level.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Won_Scene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Won_Scene.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/UI/ButtonSoundPlayer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/UI/ButtonSoundPlayer.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/UI/ControlsImageUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/UI/ControlsImageUI.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scriptable_Objects/FootStepDictionary.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scriptable_Objects/FootStepDictionary.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Monster 2 floor/AreaTimer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Monster 2 floor/AreaTimer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Monster 2 floor/GhostAudioHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Monster 2 floor/GhostAudioHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Second_Puzzle/PuzzleTotten.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Second_Puzzle/PuzzleTotten.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -106,6 +115,9 @@
       <workItem from="1649706026302" duration="88000" />
       <workItem from="1649947173223" duration="1451000" />
       <workItem from="1649965915297" duration="595000" />
+      <workItem from="1650689947641" duration="624000" />
+      <workItem from="1651523289583" duration="42000" />
+      <workItem from="1651611234273" duration="2911000" />
     </task>
     <servers />
   </component>
@@ -133,19 +145,6 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Monster/State_Machine/SmellingState.cs</url>
-          <line>11</line>
-          <properties documentPath="D:\Projetos Unity\Dark-House-GameDevMaua\Dark-House\Assets\Scripts\Game_Scripts\Monster\State_Machine\SmellingState.cs" initialLine="11" containingFunctionPresentation="method 'OnStateEnter'">
-            <startOffsets>
-              <option value="313" />
-            </startOffsets>
-            <endOffsets>
-              <option value="333" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Game_Scripts/Monster/State_Machine/MonsterStateMachineManager.cs</url>
           <line>38</line>

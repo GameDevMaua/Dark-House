@@ -55,5 +55,7 @@ namespace DefaultNamespace.Monster_2_floor{
                 EventManager.InvokeOnPlayerDeath();
             }
         }
+
+        public float CurrentTimer => currentTimer;
     }
 }

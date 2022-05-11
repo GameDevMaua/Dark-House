@@ -13,6 +13,9 @@ public class PauseManager : MonoBehaviour , PlayerInputActionMap.IPauseActions
     
     private PlayerInputActionMap.PauseActions pauseAction;
 
+    public static event Action OnGamePauseEvent;
+    public static event Action OnGameResumeEvent;
+
     public void Pause()
     {
         if (menuInstance)
@@ -23,6 +26,7 @@ public class PauseManager : MonoBehaviour , PlayerInputActionMap.IPauseActions
         menuInstance = Instantiate(pauseMenuPrefab);
         Time.timeScale = 0;
         playerAudioListener.enabled = false;
+        OnGamePauseEvent?.Invoke();
     }
 
     public void UnPause()
@@ -36,11 +40,7 @@ public class PauseManager : MonoBehaviour , PlayerInputActionMap.IPauseActions
         Destroy(menuInstance);
         Time.timeScale = 1;
         playerAudioListener.enabled = true;
-    }
-
-    private void Start()
-    {
-        
+        OnGameResumeEvent?.Invoke();
     }
 
     private void Awake()
