@@ -550,15 +550,15 @@ PrefabInstance:
     - target: {fileID: 1841444948, guid: b93655f3ee285d244af475a1688409f8, type: 3}
       propertyPath: m_SpriteState.m_SelectedSprite
       value: 
-      objectReference: {fileID: -7075172604837889900, guid: 5f5b4bdcf2500034183d82e2279bcb2b, type: 3}
+      objectReference: {fileID: -285256128640820858, guid: 4b90b6253909eaa4a83eabebfbf169f9, type: 3}
     - target: {fileID: 1841444948, guid: b93655f3ee285d244af475a1688409f8, type: 3}
       propertyPath: m_SpriteState.m_HighlightedSprite
       value: 
-      objectReference: {fileID: -7075172604837889900, guid: 5f5b4bdcf2500034183d82e2279bcb2b, type: 3}
+      objectReference: {fileID: -285256128640820858, guid: 4b90b6253909eaa4a83eabebfbf169f9, type: 3}
     - target: {fileID: 1841444949, guid: b93655f3ee285d244af475a1688409f8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 6099056100945471254, guid: 5f5b4bdcf2500034183d82e2279bcb2b, type: 3}
+      objectReference: {fileID: -4309697012768194718, guid: 4b90b6253909eaa4a83eabebfbf169f9, type: 3}
     - target: {fileID: 669490580124709907, guid: b93655f3ee285d244af475a1688409f8, type: 3}
       propertyPath: m_Name
       value: MenuBase
